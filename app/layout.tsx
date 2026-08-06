@@ -16,19 +16,19 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Aska Boru, 2016 yılından bu yana Antalya merkezli olarak Hakan Plastik ürünleriyle PVC boru, temiz su, atık su, sessiz boru ve yerden ısıtma sistemlerinde Türkiye geneline hizmet vermektedir.",
+    "Aska Boru, Antalya merkezli Hakan Plastik ve GF Hakan Plastik ürünleriyle PVC boru, temiz su, atık su, sessiz boru ve yerden ısıtma sistemlerinde profesyonel çözümler sunmaktadır.",
 
   keywords: [
     "Aska Boru",
     "Hakan Plastik",
-    "Antalya Boru",
-    "PVC Boru",
-    "Temiz Su Borusu",
-    "Atık Su Sistemleri",
-    "Sessiz Boru",
-    "Yerden Isıtma",
-    "Antalya Yapı Malzemeleri",
-    "Plastik Boru",
+    "GF Hakan Plastik",
+    "Antalya boru",
+    "PVC boru",
+    "temiz su sistemleri",
+    "atık su sistemleri",
+    "sessiz boru",
+    "yerden ısıtma",
+    "plastik boru sistemleri",
   ],
 
   authors: [
@@ -38,28 +38,47 @@ export const metadata: Metadata = {
   ],
 
   creator: "Aska Boru",
-
   publisher: "Aska Boru",
 
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
 
   openGraph: {
-    title: "Aska Boru",
+    title: "Aska Boru | Hakan Plastik Yetkili Satış Noktası",
     description:
-      "Hakan Plastik yetkili satış noktası. Antalya merkezli, Türkiye geneline profesyonel plastik boru çözümleri.",
+      "Antalya merkezli profesyonel plastik boru ve altyapı çözümleri.",
     url: "https://askaboru.com",
     siteName: "Aska Boru",
     locale: "tr_TR",
     type: "website",
+    images: [
+      {
+        url: "/logos/aska-logo.png",
+        width: 800,
+        height: 600,
+        alt: "Aska Boru Logo",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Aska Boru",
+    description:
+      "Hakan Plastik ürünleriyle profesyonel boru sistemleri.",
+    images: ["/logos/aska-logo.png"],
   },
 
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: "/logos/aska-logo-round.png",
+    shortcut: "/logos/aska-logo-round.png",
+    apple: "/logos/aska-logo-round.png",
   },
 };
 

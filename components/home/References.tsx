@@ -3,7 +3,7 @@ import Container from "../layout/Container";
 const references = [
   "Toplu Konut Projeleri",
   "Villa Projeleri",
-  "Apartman Projeleri",
+  "Konut Projeleri",
   "İş Merkezleri",
   "Sanayi Yapıları",
   "Kamu Projeleri",
@@ -17,7 +17,7 @@ export default function References() {
         <div className="text-center">
 
           <p className="text-sm font-bold uppercase tracking-[0.3em] text-red-700">
-            REFERANSLAR
+            PROJE ALANLARIMIZ
           </p>
 
           <h2 className="mt-4 text-4xl font-black text-neutral-900">

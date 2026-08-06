@@ -2,7 +2,7 @@ import Container from "../layout/Container";
 
 export default function Map() {
   return (
-    <section className="bg-white py-24">
+    <section id="harita" className="bg-white py-24">
       <Container>
         <div className="mb-12 text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-red-700">
@@ -14,7 +14,7 @@ export default function Map() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
-            Antalya'daki mağazamızı ziyaret edebilir veya bizimle iletişime
+            Antalya'daki Depomuzu ziyaret edebilir veya bizimle iletişime
             geçebilirsiniz.
           </p>
         </div>
