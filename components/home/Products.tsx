@@ -37,170 +37,220 @@ const products = [
 ];
 
 
+
 export default function Products() {
-  return (
-    <section className="bg-gray-50 py-24">
 
-      <Container>
+return (
 
-        <SectionTitle
-          badge="ÜRÜNLERİMİZ"
-          title="Ürün Gruplarımız"
-          description="GF Hakan Plastik ürünleriyle altyapı ve üstyapı projeleriniz için güvenilir çözümler sunuyoruz."
-        />
+<section id="urunler">
 
 
+  <Container>
 
-        <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+    <SectionTitle
+
+      badge="ÜRÜNLERİMİZ"
+
+      title="Ürün Gruplarımız"
+
+      description="GF Hakan Plastik ürünleriyle altyapı ve üstyapı projeleriniz için güvenilir çözümler sunuyoruz."
+
+    />
 
 
-          {products.map((product) => (
 
-            <div
-              key={product.title}
+
+    <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+
+
+      {products.map((product) => (
+
+
+        <div
+
+          key={product.title}
+
+          className="
+          overflow-hidden
+          rounded-3xl
+          border
+          border-gray-200
+          bg-white
+          shadow-md
+          transition-all
+          duration-300
+          hover:-translate-y-2
+          hover:shadow-xl
+          "
+
+        >
+
+
+
+          <div className="relative h-72 bg-white">
+
+
+            <Image
+
+              src={product.image}
+
+              alt={product.title}
+
+              fill
+
+              sizes="(max-width:768px) 100vw, 33vw"
+
               className="
-              overflow-hidden
-              rounded-3xl
-              border
-              border-gray-200
-              bg-white
-              shadow-md
-              transition-all
-              duration-300
-              hover:-translate-y-2
-              hover:shadow-xl
+              object-contain
+              p-5
+              transition
+              duration-500
+              hover:scale-105
+              "
+
+            />
+
+
+          </div>
+
+
+
+
+
+
+          <div className="px-8 pb-8 pt-5">
+
+
+
+            <h3
+              className="
+              text-xl
+              font-black
+              text-neutral-900
               "
             >
 
+              {product.title}
 
-              <div className="relative h-72 bg-white">
-
-
-                <Image
-                  src={product.image}
-                  alt={product.title}
-                  fill
-                  sizes="(max-width:768px) 100vw, 33vw"
-                  className="
-                  object-contain
-                  p-5
-                  transition
-                  duration-500
-                  hover:scale-105
-                  "
-                />
-
-
-              </div>
+            </h3>
 
 
 
 
-              <div className="px-8 pb-8 pt-5">
 
-
-                <h3 className="
-                text-xl
-                font-black
-                text-neutral-900
-                "
-                >
-
-                  {product.title}
-
-                </h3>
+            <div
+              className="
+              mt-4
+              h-1
+              w-12
+              rounded-full
+              bg-[#005B9A]
+              "
+            />
 
 
 
 
-                <div className="
-                mt-4
-                h-1
-                w-12
-                rounded-full
+
+
+
+            {product.pdf ? (
+
+
+              <a
+
+                href={product.pdf}
+
+                target="_blank"
+
+                rel="noopener noreferrer"
+
+                className="
+                mt-6
+                inline-flex
+                items-center
+                justify-center
+                rounded-xl
                 bg-[#005B9A]
+                px-7
+                py-3
+                text-sm
+                font-bold
+                !text-white
+                shadow-md
+                transition
+                hover:bg-[#003B5C]
                 "
-                />
+
+              >
+
+                Detaylı Bilgi Al
+
+
+              </a>
 
 
 
-
-
-                {product.pdf ? (
-
-                  <a
-                    href={product.pdf}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="
-                    mt-6
-                    inline-flex
-                    items-center
-                    justify-center
-                    rounded-xl
-                    bg-[#005B9A]
-                    px-7
-                    py-3
-                    text-sm
-                    font-bold
-                    !text-white
-                    shadow-md
-                    transition
-                    hover:bg-[#003B5C]
-                    "
-                  >
-
-                    Detaylı Bilgi Al
-
-                  </a>
-
-
-                ) : (
-
-
-                  <a
-                    href="#iletisim"
-                    className="
-                    mt-6
-                    inline-flex
-                    items-center
-                    justify-center
-                    rounded-xl
-                    bg-[#005B9A]
-                    px-7
-                    py-3
-                    text-sm
-                    font-bold
-                    !text-white
-                    shadow-md
-                    transition
-                    hover:bg-[#003B5C]
-                    "
-                  >
-
-                    İletişime Geçiniz
-
-                  </a>
-
-
-                )}
+            ) : (
 
 
 
-              </div>
+              <a
+
+                href="#iletisim"
+
+                className="
+                mt-6
+                inline-flex
+                items-center
+                justify-center
+                rounded-xl
+                bg-[#005B9A]
+                px-7
+                py-3
+                text-sm
+                font-bold
+                !text-white
+                shadow-md
+                transition
+                hover:bg-[#003B5C]
+                "
+
+              >
+
+                İletişime Geçiniz
 
 
-            </div>
+              </a>
 
 
-          ))}
+            )}
+
+
+
+          </div>
+
+
 
 
         </div>
 
 
-      </Container>
+      ))}
 
-    </section>
-  );
+
+
+    </div>
+
+
+
+  </Container>
+
+
+</section>
+
+);
+
 }
