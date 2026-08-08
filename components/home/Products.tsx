@@ -5,133 +5,75 @@ import SectionTitle from "../shared/SectionTitle";
 
 const products = [
   {
-    title: "PVC Boru Sistemleri",
-    image: "/images/products/pvc.jpg",
-    description:
-      "Altyapı ve üstyapı projeleri için dayanıklı ve uzun ömürlü PVC boru çözümleri.",
+    title: "Silenta 3A",
+    image: "/images/products/silenta.3a.png",
+    pdf: "/pdf/silenta.3a.pdf",
   },
   {
-    title: "Temiz Su Sistemleri",
-    image: "/images/products/temiz-su.jpg",
-    description:
-      "Konut ve ticari yapılarda güvenilir temiz su tesisat sistemleri.",
+    title: "Silenta Premium",
+    image: "/images/products/silenta.premium.png",
+    pdf: "/pdf/silenta.premium.pdf",
+  },
+  {
+    title: "Silenta FR",
+    image: "/images/products/silenta.fr.png",
+    pdf: "/pdf/silenta.fr.pdf",
+  },
+  {
+    title: "PVC Atık Su Sistemleri",
+    image: "/images/products/pvc.png",
+    pdf: "/pdf/pvc.pdf",
+  },
+  {
+    title: "Aquasystem PP-R ve PP-RCT",
+    image: "/images/products/aquasystem.png",
+    pdf: "/pdf/ppr.pdf",
   },
   {
     title: "Yerden Isıtma Sistemleri",
-    image: "/images/products/yerden-isitma.jpg",
-    description:
-      "Konforlu ve verimli yaşam alanları için modern yerden ısıtma çözümleri.",
+    image: "/images/products/yerden.isitma.png",
+    pdf: "",
   },
 ];
 
 
 export default function Products() {
   return (
-    <section
-      id="urunler"
-      className="bg-gradient-to-b from-gray-50 to-white py-28"
-    >
+    <section className="bg-gray-50 py-24">
 
       <Container>
-
 
         <SectionTitle
           badge="ÜRÜNLERİMİZ"
           title="Ürün Gruplarımız"
-          description="GF Hakan Plastik ürünleriyle altyapı, üstyapı ve tesisat projeleriniz için güvenilir çözümler sunuyoruz."
+          description="GF Hakan Plastik ürünleriyle altyapı ve üstyapı projeleriniz için güvenilir çözümler sunuyoruz."
         />
 
 
 
-
-        {/* ÖNE ÇIKAN SILENTA */}
-
-        <div className="mt-16 overflow-hidden rounded-[40px] bg-white shadow-2xl">
-
-
-          <div className="grid lg:grid-cols-2">
-
-
-            {/* Silenta Görsel */}
-
-            <div className="relative h-[450px]">
-
-              <Image
-                src="/images/products/sessiz-boru.jpg"
-                alt="Silenta Sessiz Boru Sistemleri"
-                fill
-                sizes="(max-width:1024px) 100vw, 50vw"
-                className="object-cover"
-              />
-
-            </div>
-
-
-
-
-
-            {/* Silenta Yazı */}
-
-            <div className="flex flex-col justify-center p-10 lg:p-14">
-
-
-              <span className="w-fit rounded-full bg-red-100 px-5 py-2 text-sm font-bold text-red-700">
-                ÖNE ÇIKAN ÜRÜN
-              </span>
-
-
-
-              <h3 className="mt-6 text-4xl font-black text-neutral-900">
-                Silenta Sessiz Boru Sistemleri
-              </h3>
-
-
-
-              <p className="mt-6 text-lg leading-8 text-neutral-600">
-
-                Modern yapılarda maksimum konfor sağlayan,
-                ses yalıtımı yüksek ve dayanıklı sessiz boru çözümleri.
-
-              </p>
-
-
-
-              <button className="mt-8 w-fit rounded-xl bg-red-700 px-8 py-4 font-bold text-white transition hover:bg-red-800">
-
-                Detaylı Bilgi
-
-              </button>
-
-
-            </div>
-
-
-          </div>
-
-
-        </div>
-
-
-
-
-
-
-
-
-        {/* ALT ÜRÜN KARTLARI */}
-
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
+        <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
 
           {products.map((product) => (
 
             <div
               key={product.title}
-              className="group overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
+              className="
+              overflow-hidden
+              rounded-3xl
+              border
+              border-gray-200
+              bg-white
+              shadow-md
+              transition-all
+              duration-300
+              hover:-translate-y-2
+              hover:shadow-xl
+              "
             >
 
 
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-72 bg-white">
 
 
                 <Image
@@ -139,7 +81,13 @@ export default function Products() {
                   alt={product.title}
                   fill
                   sizes="(max-width:768px) 100vw, 33vw"
-                  className="object-cover transition duration-500 group-hover:scale-110"
+                  className="
+                  object-contain
+                  p-5
+                  transition
+                  duration-500
+                  hover:scale-105
+                  "
                 />
 
 
@@ -148,33 +96,98 @@ export default function Products() {
 
 
 
+              <div className="px-8 pb-8 pt-5">
 
-              <div className="p-8">
 
+                <h3 className="
+                text-xl
+                font-black
+                text-neutral-900
+                "
+                >
 
-                <h3 className="text-2xl font-bold text-gray-900">
                   {product.title}
+
                 </h3>
 
 
 
-                <p className="mt-4 leading-7 text-gray-600">
-                  {product.description}
-                </p>
+
+                <div className="
+                mt-4
+                h-1
+                w-12
+                rounded-full
+                bg-[#005B9A]
+                "
+                />
 
 
 
 
-                <button className="mt-8 rounded-xl bg-red-700 px-6 py-3 font-semibold text-white transition hover:bg-red-800">
 
-                  Detaylı Bilgi
+                {product.pdf ? (
 
-                </button>
+                  <a
+                    href={product.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                    mt-6
+                    inline-flex
+                    items-center
+                    justify-center
+                    rounded-xl
+                    bg-[#005B9A]
+                    px-7
+                    py-3
+                    text-sm
+                    font-bold
+                    !text-white
+                    shadow-md
+                    transition
+                    hover:bg-[#003B5C]
+                    "
+                  >
+
+                    Detaylı Bilgi Al
+
+                  </a>
+
+
+                ) : (
+
+
+                  <a
+                    href="#iletisim"
+                    className="
+                    mt-6
+                    inline-flex
+                    items-center
+                    justify-center
+                    rounded-xl
+                    bg-[#005B9A]
+                    px-7
+                    py-3
+                    text-sm
+                    font-bold
+                    !text-white
+                    shadow-md
+                    transition
+                    hover:bg-[#003B5C]
+                    "
+                  >
+
+                    İletişime Geçiniz
+
+                  </a>
+
+
+                )}
 
 
 
               </div>
-
 
 
             </div>
@@ -184,7 +197,6 @@ export default function Products() {
 
 
         </div>
-
 
 
       </Container>
