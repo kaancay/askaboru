@@ -40,115 +40,85 @@ const products = [
 
 export default function Products() {
 
-return (
 
-<section id="urunler">
+  return (
 
-
-  <Container>
-
-
-    <SectionTitle
-
-      badge="ÜRÜNLERİMİZ"
-
-      title="Ürün Gruplarımız"
-
-      description="GF Hakan Plastik ürünleriyle altyapı ve üstyapı projeleriniz için güvenilir çözümler sunuyoruz."
-
-    />
+    <section
+      id="urunler"
+      className="scroll-mt-32 pt-16"
+    >
 
 
+      <Container>
 
 
-    <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <SectionTitle
 
+          badge="ÜRÜNLERİMİZ"
 
+          title="Ürün Gruplarımız"
 
-      {products.map((product) => (
+          description="GF Hakan Plastik ürünleriyle altyapı ve üstyapı projeleriniz için güvenilir çözümler sunuyoruz."
 
-
-        <div
-
-          key={product.title}
-
-          className="
-          overflow-hidden
-          rounded-3xl
-          border
-          border-gray-200
-          bg-white
-          shadow-md
-          transition-all
-          duration-300
-          hover:-translate-y-2
-          hover:shadow-xl
-          "
-
-        >
-
-
-
-          <div className="relative h-72 bg-white">
-
-
-            <Image
-
-              src={product.image}
-
-              alt={product.title}
-
-              fill
-
-              sizes="(max-width:768px) 100vw, 33vw"
-
-              className="
-              object-contain
-              p-5
-              transition
-              duration-500
-              hover:scale-105
-              "
-
-            />
-
-
-          </div>
+        />
 
 
 
 
 
-
-          <div className="px-8 pb-8 pt-5">
-
-
-
-            <h3
-              className="
-              text-xl
-              font-black
-              text-neutral-900
-              "
-            >
-
-              {product.title}
-
-            </h3>
+        <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
 
 
+          {products.map((product) => (
 
 
             <div
+
+              key={product.title}
+
               className="
-              mt-4
-              h-1
-              w-12
-              rounded-full
-              bg-[#005B9A]
+              overflow-hidden
+              rounded-3xl
+              border
+              border-gray-200
+              bg-white
+              shadow-md
+              transition-all
+              duration-300
+              hover:-translate-y-2
+              hover:shadow-xl
               "
-            />
+
+            >
+
+
+
+              <div className="relative h-72 bg-white">
+
+
+                <Image
+
+                  src={product.image}
+
+                  alt={product.title}
+
+                  fill
+
+                  sizes="(max-width:768px) 100vw, 33vw"
+
+                  className="
+                  object-contain
+                  p-5
+                  transition
+                  duration-500
+                  hover:scale-105
+                  "
+
+                />
+
+
+              </div>
 
 
 
@@ -156,81 +126,133 @@ return (
 
 
 
-            {product.pdf ? (
-
-
-              <a
-
-                href={product.pdf}
-
-                target="_blank"
-
-                rel="noopener noreferrer"
-
-                className="
-                mt-6
-                inline-flex
-                items-center
-                justify-center
-                rounded-xl
-                bg-[#005B9A]
-                px-7
-                py-3
-                text-sm
-                font-bold
-                !text-white
-                shadow-md
-                transition
-                hover:bg-[#003B5C]
-                "
-
-              >
-
-                Detaylı Bilgi Al
-
-
-              </a>
+              <div className="px-8 pb-8 pt-5">
 
 
 
-            ) : (
+                <h3
+
+                  className="
+                  text-xl
+                  font-black
+                  text-neutral-900
+                  "
+
+                >
+
+                  {product.title}
+
+
+                </h3>
 
 
 
-              <a
-
-                href="#iletisim"
-
-                className="
-                mt-6
-                inline-flex
-                items-center
-                justify-center
-                rounded-xl
-                bg-[#005B9A]
-                px-7
-                py-3
-                text-sm
-                font-bold
-                !text-white
-                shadow-md
-                transition
-                hover:bg-[#003B5C]
-                "
-
-              >
-
-                İletişime Geçiniz
 
 
-              </a>
+                <div
 
+                  className="
+                  mt-4
+                  h-1
+                  w-12
+                  rounded-full
+                  bg-[#005B9A]
+                  "
 
-            )}
+                />
 
 
 
-          </div>
+
+
+
+
+                {product.pdf ? (
+
+
+                  <a
+
+                    href={product.pdf}
+
+                    target="_blank"
+
+                    rel="noopener noreferrer"
+
+                    className="
+                    mt-6
+                    inline-flex
+                    items-center
+                    justify-center
+                    rounded-xl
+                    bg-[#005B9A]
+                    px-7
+                    py-3
+                    text-sm
+                    font-bold
+                    !text-white
+                    shadow-md
+                    transition
+                    hover:bg-[#003B5C]
+                    "
+
+                  >
+
+                    Detaylı Bilgi Al
+
+
+                  </a>
+
+
+
+                ) : (
+
+
+
+                  <a
+
+                    href="#iletisim"
+
+                    className="
+                    mt-6
+                    inline-flex
+                    items-center
+                    justify-center
+                    rounded-xl
+                    bg-[#005B9A]
+                    px-7
+                    py-3
+                    text-sm
+                    font-bold
+                    !text-white
+                    shadow-md
+                    transition
+                    hover:bg-[#003B5C]
+                    "
+
+                  >
+
+                    İletişime Geçiniz
+
+
+                  </a>
+
+
+
+                )}
+
+
+
+
+              </div>
+
+
+
+
+            </div>
+
+
+
+          ))}
 
 
 
@@ -238,19 +260,13 @@ return (
         </div>
 
 
-      ))}
 
 
-
-    </div>
-
+      </Container>
 
 
-  </Container>
+    </section>
 
-
-</section>
-
-);
+  );
 
 }
