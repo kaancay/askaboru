@@ -13,17 +13,15 @@ export default function TopBar() {
 
         <div
           className="
-          grid
-          grid-cols-2
-          gap-y-3
+          flex
+          items-center
+          justify-center
+          gap-8
           py-3
           text-xs
           font-semibold
-          md:flex
-          md:items-center
+
           md:justify-between
-          md:gap-5
-          md:py-3
           md:text-sm
           "
         >
@@ -48,13 +46,12 @@ export default function TopBar() {
 
           >
 
-            <Phone size={15} />
+            <Phone size={15}/>
+
 
             <span>
 
-              (0242)
-              <br className="md:hidden" />
-              {" "}338 16 66
+              (0242) 338 16 66
 
             </span>
 
@@ -68,6 +65,7 @@ export default function TopBar() {
 
 
           {/* WhatsApp */}
+
 
 
           <a
@@ -87,57 +85,14 @@ export default function TopBar() {
 
           >
 
-            <MessageCircle size={15} />
+            <MessageCircle size={15}/>
 
 
             <span>
 
               WhatsApp:
-              <br className="md:hidden" />
-              {" "}+90 537 419 82 85
-
-            </span>
-
-
-          </a>
-
-
-
-
-
-
-
-
-          {/* Konum */}
-
-
-
-          <a
-
-            href="#harita"
-
-            className="
-            flex
-            items-center
-            gap-2
-            hover:text-blue-100
-            "
-
-          >
-
-            <MapPin size={15} />
-
-
-            <span>
-
-              Muratpaşa /
-              <br className="md:hidden" />
-              {" "}Antalya
-
-              <span className="hidden md:inline">
-
-                {" "}(Haritada Gör)
-
+              <span className="ml-1">
+                +90 537 419 82 85
               </span>
 
             </span>
@@ -153,28 +108,67 @@ export default function TopBar() {
 
 
 
-          {/* Sevkiyat */}
+          {/* Konum - Sadece Masaüstü */}
+
+
+
+          <a
+
+            href="#harita"
+
+            className="
+            hidden
+            items-center
+            gap-2
+            hover:text-blue-100
+            md:flex
+            "
+
+          >
+
+            <MapPin size={15}/>
+
+
+            <span>
+
+              Muratpaşa / Antalya
+              <span className="ml-1">
+                (Haritada Gör)
+              </span>
+
+            </span>
+
+
+          </a>
+
+
+
+
+
+
+
+
+          {/* Sevkiyat - Sadece Masaüstü */}
 
 
 
           <div
 
             className="
-            flex
+            hidden
             items-center
             gap-2
+            md:flex
             "
 
           >
 
-            <Truck size={15} />
+            <Truck size={15}/>
 
 
             <span>
 
-              Türkiye
-              <br className="md:hidden" />
-              {" "}Geneline Sevkiyat
+              Türkiye Geneline Sevkiyat
 
             </span>
 
