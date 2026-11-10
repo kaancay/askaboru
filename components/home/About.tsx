@@ -36,7 +36,7 @@ export default function About() {
   return (
     <section
       id="hakkimizda"
-      className="relative mt-24 overflow-hidden"
+      className="relative overflow-hidden border-t border-[#39A9E8]/40 bg-[#003B5C]"
     >
 
 
@@ -49,6 +49,7 @@ export default function About() {
           src="/images/hakkimizda-2.png"
           alt="Aska Boru"
           fill
+          sizes="100vw"
           className="object-cover"
         />
 

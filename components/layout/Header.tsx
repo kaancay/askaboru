@@ -42,7 +42,7 @@ export default function Header() {
   return (
 
 
-<header className="sticky top-0 z-50 border-b border-gray-200 bg-white shadow-sm">
+<header className="sticky top-0 z-50 border-b-2 border-[#005B9A] bg-white shadow-sm">
 
 
   <Container>
@@ -70,11 +70,12 @@ export default function Header() {
             href={item.href}
 
             className="
+            header-nav-link
             text-[16px]
             font-extrabold
             text-gray-800
             transition
-            hover:text-red-700
+            hover:text-[#005B9A]
             "
 
           >
@@ -161,11 +162,12 @@ export default function Header() {
               href={item.href}
 
               className="
+              header-nav-link
               text-[16px]
               font-extrabold
               text-gray-800
               transition
-              hover:text-red-700
+              hover:text-[#005B9A]
               "
 
             >
@@ -236,6 +238,9 @@ export default function Header() {
       <button
 
         onClick={() => setMenuOpen(!menuOpen)}
+        aria-label={menuOpen ? "Menüyü kapat" : "Menüyü aç"}
+        aria-expanded={menuOpen}
+        aria-controls="mobile-menu"
 
         className="
         ml-auto
@@ -275,7 +280,7 @@ export default function Header() {
   {menuOpen && (
 
 
-    <div className="border-t border-gray-200 bg-white lg:hidden">
+    <div id="mobile-menu" className="absolute inset-x-0 top-full border-t border-gray-200 border-b-2 border-b-[#005B9A] bg-white shadow-xl lg:hidden">
 
 
       <Container>
@@ -298,7 +303,7 @@ export default function Header() {
 
               className="
               border-b
-              border-gray-100
+              border-[#005B9A]/25
               py-4
               text-[16px]
               font-bold

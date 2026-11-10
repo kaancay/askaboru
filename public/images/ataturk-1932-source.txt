@@ -1,0 +1,7 @@
+Asset: ataturk-1932.jpg
+Subject: Mustafa Kemal Ataturk, portrait dated 29 March 1932.
+Source: https://commons.wikimedia.org/wiki/File:Ataturk1930s.jpg
+Original: https://upload.wikimedia.org/wikipedia/commons/a/a8/Ataturk1930s.jpg
+Author: Unknown.
+Rights: Wikimedia Commons marks this historical photograph as public domain in Turkey.
+Presentation: Black and white treatment is applied in the website's CSS.

@@ -3,7 +3,6 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 import Hero from "@/components/home/Hero";
-import Stats from "@/components/home/Stats";
 import About from "@/components/home/About";
 import Products from "@/components/home/Products";
 import WhyUs from "@/components/home/WhyUs";
@@ -13,6 +12,7 @@ import Contact from "@/components/home/Contact";
 import Map from "@/components/home/Map";
 
 import FloatingWhatsApp from "@/components/shared/FloatingWhatsApp";
+import RemembranceModal from "@/components/shared/RemembranceModal";
 
 
 
@@ -110,6 +110,8 @@ export default function Home() {
 
 
 
+      <RemembranceModal />
+
       <TopBar />
 
 
@@ -123,7 +125,6 @@ export default function Home() {
         <Hero />
 
 
-        <Stats />
 
 
         <About />
