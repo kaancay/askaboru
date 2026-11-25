@@ -1,378 +1,64 @@
 "use client";
-
 import { useState } from "react";
 import Image from "next/image";
 import { Menu, X, MessageCircle } from "lucide-react";
-import Container from "./Container";
-
-
-const leftMenu = [
-  {
-    title: "Anasayfa",
-    href: "/",
-  },
-  {
-    title: "Hakkımızda",
-    href: "/#hakkimizda",
-  },
+const links = [
+  ["Anasayfa", "#anasayfa"],
+  ["Kurumsal", "#hakkimizda"],
+  ["Ürünlerimiz", "#urunler"],
+  ["Katalog", "#katalog"],
+  ["İletişim", "#iletisim"],
 ];
-
-
-
-const rightMenu = [
-  {
-    title: "Ürünler",
-    href: "/#urunler",
-  },
-  {
-    title: "İletişim",
-    href: "/#iletisim",
-  },
-];
-
-
-
 export default function Header() {
-
-
-  const [menuOpen, setMenuOpen] = useState(false);
-
-
-
+  const [open, setOpen] = useState(false);
   return (
-
-
-<header className="sticky top-0 z-50 border-b-2 border-[#005B9A] bg-white shadow-sm">
-
-
-  <Container>
-
-
-    <div className="relative flex h-28 items-center justify-center">
-
-
-
-
-
-      {/* SOL MENÜ */}
-
-
-      <nav className="absolute left-52 hidden items-center gap-6 lg:flex">
-
-
-        {leftMenu.map((item) => (
-
-
-          <a
-
-            key={item.title}
-
-            href={item.href}
-
-            className="
-            header-nav-link
-            text-[16px]
-            font-extrabold
-            text-gray-800
-            transition
-            hover:text-[#005B9A]
-            "
-
-          >
-
-            {item.title}
-
-          </a>
-
-
-        ))}
-
-
-      </nav>
-
-
-
-
-
-
-
-      {/* LOGO */}
-
-
-      <a
-
-        href="/"
-
-        className="
-        absolute
-        left-1/2
-        top-1/2
-        z-20
-        -translate-x-1/2
-        -translate-y-1/2
-        "
-
-      >
-
-
-        <Image
-
-          src="/logos/aska-logo-round.png"
-
-          alt="Aska Boru"
-
-          width={130}
-
-          height={130}
-
-          className="h-auto drop-shadow-lg"
-
-          priority
-
-        />
-
-
-      </a>
-
-
-
-
-
-
-
-      {/* SAĞ MENÜ */}
-
-
-
-      <div className="absolute right-0 hidden items-center gap-6 lg:flex">
-
-
-
-        <nav className="mr-16 flex items-center gap-6">
-
-
-
-          {rightMenu.map((item) => (
-
-
-            <a
-
-              key={item.title}
-
-              href={item.href}
-
-              className="
-              header-nav-link
-              text-[16px]
-              font-extrabold
-              text-gray-800
-              transition
-              hover:text-[#005B9A]
-              "
-
-            >
-
-              {item.title}
-
-            </a>
-
-
-          ))}
-
-
-
-        </nav>
-
-
-
-
-
-
-
-
+    <header className="site-header">
+      <div className="shell header-inner">
         <a
-
-          href="https://wa.me/905374198285?text=Merhaba%20Aska%20Boru%20ürünleriniz%20hakkında%20bilgi%20almak%20istiyorum."
-
-          target="_blank"
-
-          rel="noopener noreferrer"
-
-          className="
-          flex
-          items-center
-          gap-2
-          rounded-xl
-          bg-green-500
-          px-6
-          py-3
-          font-extrabold
-          text-white
-          transition
-          hover:bg-green-600
-          "
-
+          href="#anasayfa"
+          aria-label="Aska Boru anasayfa"
+          className="brand-logo"
         >
-
-          <MessageCircle size={20}/>
-
-          TEKLİF AL
-
-
+          <Image
+            src="/logos/aska-logo.png"
+            alt="Aska Boru"
+            width={620}
+            height={288}
+            priority
+          />
         </a>
-
-
-
-      </div>
-
-
-
-
-
-
-
-      {/* MOBİL BUTON */}
-
-
-
-      <button
-
-        onClick={() => setMenuOpen(!menuOpen)}
-        aria-label={menuOpen ? "Menüyü kapat" : "Menüyü aç"}
-        aria-expanded={menuOpen}
-        aria-controls="mobile-menu"
-
-        className="
-        ml-auto
-        rounded-xl
-        border
-        border-gray-300
-        p-3
-        lg:hidden
-        "
-
-      >
-
-        {menuOpen ? <X size={24}/> : <Menu size={24}/>}
-
-
-      </button>
-
-
-
-
-    </div>
-
-
-
-  </Container>
-
-
-
-
-
-
-
-  {/* MOBİL MENÜ */}
-
-
-
-  {menuOpen && (
-
-
-    <div id="mobile-menu" className="absolute inset-x-0 top-full border-t border-gray-200 border-b-2 border-b-[#005B9A] bg-white shadow-xl lg:hidden">
-
-
-      <Container>
-
-
-        <nav className="flex flex-col py-6">
-
-
-
-          {[...leftMenu, ...rightMenu].map((item)=>(
-
-
-            <a
-
-              key={item.title}
-
-              href={item.href}
-
-              onClick={()=>setMenuOpen(false)}
-
-              className="
-              border-b
-              border-[#005B9A]/25
-              py-4
-              text-[16px]
-              font-bold
-              text-gray-800
-              "
-
-            >
-
-              {item.title}
-
-
+        <nav className="desktop-nav" aria-label="Ana menü">
+          {links.map(([label, href]) => (
+            <a key={href} href={href}>
+              {label}
             </a>
-
-
           ))}
-
-
-
-
-
-
-          <a
-
-            href="https://wa.me/905374198285?text=Merhaba%20Aska%20Boru%20ürünleriniz%20hakkında%20bilgi%20almak%20istiyorum."
-
-            target="_blank"
-
-            rel="noopener noreferrer"
-
-            className="
-            mt-6
-            flex
-            items-center
-            justify-center
-            gap-2
-            rounded-xl
-            bg-green-500
-            py-4
-            font-extrabold
-            text-white
-            "
-
-          >
-
-            <MessageCircle size={22}/>
-
-            TEKLİF AL
-
-
-          </a>
-
-
-
         </nav>
-
-
-      </Container>
-
-
-    </div>
-
-
-  )}
-
-
-
-</header>
-
-
+        <a className="button button-blue header-quote" href="#iletisim">
+          <MessageCircle size={18} /> Teklif alın
+        </a>
+        <button
+          className="menu-toggle"
+          aria-label={open ? "Menüyü kapat" : "Menüyü aç"}
+          aria-expanded={open}
+          aria-controls="mobile-menu"
+          onClick={() => setOpen(!open)}
+        >
+          {open ? <X /> : <Menu />}
+        </button>
+      </div>
+      {open && (
+        <nav id="mobile-menu" className="mobile-nav" aria-label="Mobil menü">
+          {links.map(([label, href]) => (
+            <a key={href} href={href} onClick={() => setOpen(false)}>
+              {label}
+            </a>
+          ))}
+          <a href="#iletisim" onClick={() => setOpen(false)}>
+            Teklif alın
+          </a>
+        </nav>
+      )}
+    </header>
   );
-
 }

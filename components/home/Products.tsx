@@ -1,272 +1,137 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
-import Container from "../layout/Container";
-import SectionTitle from "../shared/SectionTitle";
-
-
+import { FileText, MessageCircle } from "lucide-react";
 const products = [
   {
     title: "Silenta 3A",
-    image: "/images/products/silenta.3a.png",
-    pdf: "/pdf/silenta.3a.pdf",
+    category: "Sessiz boru",
+    image: "silenta.3a",
+    pdf: "silenta.3a",
+    text: "Yapılarda akustik konfor için sessiz atık su çözümleri.",
   },
   {
     title: "Silenta Premium",
-    image: "/images/products/silenta.premium.png",
-    pdf: "/pdf/silenta.premium.pdf",
+    category: "Sessiz boru",
+    image: "silenta.premium",
+    pdf: "silenta.premium",
+    text: "Sessiz atık su tesisatları için Premium ürün ailesi.",
   },
   {
     title: "Silenta FR",
-    image: "/images/products/silenta.fr.png",
-    pdf: "/pdf/silenta.fr.pdf",
+    category: "Sessiz boru",
+    image: "silenta.fr",
+    pdf: "silenta.fr",
+    text: "Projenizin teknik ihtiyaçlarına uygun Silenta FR sistemleri.",
   },
   {
     title: "PVC Atık Su Sistemleri",
-    image: "/images/products/pvc.png",
-    pdf: "/pdf/pvc.pdf",
+    category: "Atık su",
+    image: "pvc",
+    pdf: "pvc",
+    text: "Atık su tesisatları için boru ve bağlantı elemanları.",
   },
   {
-    title: "Aquasystem PP-R ve PP-RCT",
-    image: "/images/products/aquasystem.png",
-    pdf: "/pdf/ppr.pdf",
+    title: "Aquasystem PP-R / PP-RCT",
+    category: "Temiz su",
+    image: "aquasystem",
+    pdf: "ppr",
+    text: "Temiz su tesisatlarında birbiriyle uyumlu sistem çözümleri.",
   },
   {
     title: "Yerden Isıtma Sistemleri",
-    image: "/images/products/yerden.isitma.png",
+    category: "Isıtma",
+    image: "yerden.isitma",
     pdf: "",
+    text: "Yaşam alanları için yerden ısıtma sistem çözümleri.",
   },
 ];
-
-
-
+const categories = [
+  "Tüm ürünler",
+  "Sessiz boru",
+  "Atık su",
+  "Temiz su",
+  "Isıtma",
+];
 export default function Products() {
-
-
-  return (
-
-    <section
-      id="urunler"
-      className="scroll-mt-32 pt-16"
-    >
-
-
-      <Container>
-
-
-        <SectionTitle
-
-          badge="ÜRÜNLERİMİZ"
-
-          title="Ürün Gruplarımız"
-
-          description="GF Hakan Plastik ürünleriyle altyapı ve üstyapı projeleriniz için güvenilir çözümler sunuyoruz."
-
-        />
-
-
-
-
-
-        <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-
-
-
-          {products.map((product) => (
-
-
-            <div
-
-              key={product.title}
-
-              className="
-              overflow-hidden
-              rounded-3xl
-              border
-              border-gray-200
-              bg-white
-              shadow-md
-              transition-all
-              duration-300
-              hover:-translate-y-2
-              hover:shadow-xl
-              "
-
-            >
-
-
-
-              <div className="relative h-72 bg-white">
-
-
-                <Image
-
-                  src={product.image}
-
-                  alt={product.title}
-
-                  fill
-
-                  sizes="(max-width:768px) 100vw, 33vw"
-
-                  className="
-                  object-contain
-                  p-5
-                  transition
-                  duration-500
-                  hover:scale-105
-                  "
-
-                />
-
-
-              </div>
-
-
-
-
-
-
-
-              <div className="px-8 pb-8 pt-5">
-
-
-
-                <h3
-
-                  className="
-                  text-xl
-                  font-black
-                  text-neutral-900
-                  "
-
-                >
-
-                  {product.title}
-
-
-                </h3>
-
-
-
-
-
-                <div
-
-                  className="
-                  mt-4
-                  h-1
-                  w-12
-                  rounded-full
-                  bg-[#005B9A]
-                  "
-
-                />
-
-
-
-
-
-
-
-                {product.pdf ? (
-
-
-                  <a
-
-                    href={product.pdf}
-
-                    target="_blank"
-
-                    rel="noopener noreferrer"
-
-                    className="
-                    mt-6
-                    inline-flex
-                    items-center
-                    justify-center
-                    rounded-xl
-                    bg-[#005B9A]
-                    px-7
-                    py-3
-                    text-sm
-                    font-bold
-                    !text-white
-                    shadow-md
-                    transition
-                    hover:bg-[#003B5C]
-                    "
-
-                  >
-
-                    Detaylı Bilgi Al
-
-
-                  </a>
-
-
-
-                ) : (
-
-
-
-                  <a
-
-                    href="#iletisim"
-
-                    className="
-                    mt-6
-                    inline-flex
-                    items-center
-                    justify-center
-                    rounded-xl
-                    bg-[#005B9A]
-                    px-7
-                    py-3
-                    text-sm
-                    font-bold
-                    !text-white
-                    shadow-md
-                    transition
-                    hover:bg-[#003B5C]
-                    "
-
-                  >
-
-                    İletişime Geçiniz
-
-
-                  </a>
-
-
-
-                )}
-
-
-
-
-              </div>
-
-
-
-
-            </div>
-
-
-
-          ))}
-
-
-
-
-        </div>
-
-
-
-
-      </Container>
-
-
-    </section>
-
+  const [category, setCategory] = useState("Tüm ürünler");
+  const visible = products.filter(
+    (p) => category === "Tüm ürünler" || p.category === category,
   );
-
+  return (
+    <section id="urunler" className="section products-section">
+      <div className="shell">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">ÜRÜN ÇÖZÜMLERİMİZ</p>
+            <h2>
+              Her bağlantıda kalite.
+              <br />
+              <span>Her projeye bir çözüm.</span>
+            </h2>
+          </div>
+          <p>
+            GF Hakan Plastik ürün ailesini keşfedin.
+            <br />
+            İhtiyacınıza uygun sistem için birlikte doğru seçimi yapalım.
+          </p>
+        </div>
+        <div
+          className="product-filters"
+          role="group"
+          aria-label="Ürün kategorileri"
+        >
+          {categories.map((c) => (
+            <button
+              key={c}
+              aria-pressed={category === c}
+              onClick={() => setCategory(c)}
+            >
+              {c}
+            </button>
+          ))}
+        </div>
+        <p className="sr-only" role="status">
+          {visible.length} ürün gösteriliyor.
+        </p>
+        <div className="product-grid">
+          {visible.map((p) => (
+            <article className="product-card" key={p.title}>
+              <div className="product-image">
+                <Image
+                  src={`/images/products/${p.image}.png`}
+                  alt={p.title}
+                  fill
+                  sizes="(max-width:650px) 100vw, (max-width:1000px) 50vw, 33vw"
+                />
+              </div>
+              <div className="product-content">
+                <span className="product-category">{p.category}</span>
+                <h3>{p.title}</h3>
+                <p>{p.text}</p>
+                <a
+                  className="product-link"
+                  href={p.pdf ? `/pdf/${p.pdf}.pdf` : "#iletisim"}
+                  {...(p.pdf
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
+                >
+                  {p.pdf ? <FileText size={17} /> : <MessageCircle size={17} />}{" "}
+                  {p.pdf
+                    ? "Teknik kataloğu inceleyin"
+                    : "Ürün hakkında bilgi alın"}
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+        <div className="product-help">
+          <span>
+            Projeniz için hangi ürünün uygun olduğundan emin değil misiniz?
+          </span>
+          <a href="#iletisim">Birlikte değerlendirelim</a>
+        </div>
+      </div>
+    </section>
+  );
 }

@@ -14,153 +14,84 @@ import Map from "@/components/home/Map";
 import FloatingWhatsApp from "@/components/shared/FloatingWhatsApp";
 import RemembranceModal from "@/components/shared/RemembranceModal";
 
-
-
 const jsonLd = {
-
   "@context": "https://schema.org",
 
   "@type": "LocalBusiness",
 
+  name: "Aska Boru",
 
-  "name": "Aska Boru",
+  image: "https://www.askaboru.com/images/aska-giris-1.png",
 
+  url: "https://www.askaboru.com",
 
-  "image":
-    "https://www.askaboru.com/images/aska-giris-1.png",
+  telephone: "+90 242 338 16 66",
 
+  email: "askaboru@gmail.com",
 
-  "url":
-    "https://www.askaboru.com",
-
-
-  "telephone":
-    "+90 242 338 16 66",
-
-
-  "email":
-    "askaboru@gmail.com",
-
-
-
-  "address": {
-
+  address: {
     "@type": "PostalAddress",
 
-    "streetAddress":
-      "Kızılarık, 2814. Sk. No:54/1",
+    streetAddress: "Kızılarık, 2814. Sk. No:54/1",
 
-    "addressLocality":
-      "Muratpaşa",
+    addressLocality: "Muratpaşa",
 
-    "addressRegion":
-      "Antalya",
+    addressRegion: "Antalya",
 
-    "postalCode":
-      "07310",
+    postalCode: "07310",
 
-    "addressCountry":
-      "TR",
-
+    addressCountry: "TR",
   },
 
-
-
-  "description":
+  description:
     "Aska Boru, GF Hakan Plastik yetkili bayisi olarak PVC boru sistemleri, altyapı çözümleri, sessiz boru sistemleri, temiz su ve tesisat ürünlerinde profesyonel çözümler sunmaktadır.",
 
-
-
-  "brand": {
-
+  brand: {
     "@type": "Brand",
 
-    "name":
-      "GF Hakan Plastik",
-
+    name: "GF Hakan Plastik",
   },
 
-
-  "areaServed":
-    "Türkiye",
-
+  areaServed: "Türkiye",
 };
 
-
-
-
-
 export default function Home() {
-
-
   return (
-
     <>
-
-
       <script
-
         type="application/ld+json"
-
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(jsonLd),
         }}
-
       />
-
-
 
       <RemembranceModal />
 
       <TopBar />
 
-
       <Header />
 
-
-
       <main>
-
-
         <Hero />
-
-
-
-
-        <About />
-
 
         <Products />
 
+        <About />
 
         <References />
 
-
         <WhyUs />
-
 
         <Catalog />
 
-
         <Contact />
 
-
         <Map />
-
-
       </main>
-
-
 
       <Footer />
 
-
-
       <FloatingWhatsApp />
-
-
     </>
-
   );
-
 }
