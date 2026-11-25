@@ -508,29 +508,6 @@ a.button-glass:hover {
   line-height: 1.8;
   padding-bottom: 3px;
 }
-.product-filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
-  margin: 30px 0;
-}
-.product-filters button {
-  font-size: 14px;
-  font-weight: 550;
-  padding: 11px 20px;
-  border: 1px solid var(--line);
-  color: #4c6173;
-  background: transparent;
-  border-radius: 4px;
-}
-.product-filters button[aria-pressed="true"] {
-  background: var(--navy);
-  color: white;
-  border-color: var(--navy);
-}
-.product-filters button:hover {
-  border-color: var(--blue);
-}
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1337,14 +1314,6 @@ main section[id] {
   .section-heading > p {
     font-size: 14px;
   }
-  .product-filters {
-    gap: 7px;
-    margin: 25px 0;
-  }
-  .product-filters button {
-    padding: 10px 13px;
-    font-size: 12px;
-  }
   .product-grid {
     grid-template-columns: 1fr;
     gap: 22px;
@@ -1565,9 +1534,6 @@ main section[id] {
   .trust-item span {
     font-size: 12px;
   }
-  .product-filters button {
-    font-size: 14px;
-  }
   .header-quote {
     font-size: 14px;
   }
@@ -1588,5 +1554,172 @@ main section[id] {
 @media (max-width: 650px) {
   .product-content p {
     min-height: 0;
+  }
+}
+
+/* Refined product presentation and corporate imagery. */
+.products-section .section-heading {
+  margin-bottom: 42px;
+}
+.product-card {
+  display: flex;
+  flex-direction: column;
+}
+.product-card:focus-within {
+  border-color: #79b4d8;
+  box-shadow: 0 12px 30px #183c5210;
+}
+.product-image {
+  flex-shrink: 0;
+}
+.product-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.product-category {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.09em;
+}
+.product-content h3 {
+  line-height: 1.35;
+}
+.product-content p {
+  flex: 1;
+  min-height: 0;
+}
+.product-link {
+  margin-top: auto;
+}
+.product-help {
+  border-top: 1px solid var(--line);
+  padding-top: 28px;
+  margin-top: 36px;
+}
+.about-figure {
+  margin: 0;
+  min-width: 0;
+}
+.about-visual {
+  aspect-ratio: 4 / 3;
+  min-height: 0;
+  border-radius: 10px;
+}
+.about-visual img {
+  object-position: 68% center;
+  border-radius: 10px;
+}
+.about-figure figcaption {
+  margin-top: 14px;
+  color: #758596;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+.about-stamp {
+  right: -20px;
+  bottom: 24px;
+  border-radius: 5px;
+  background: var(--navy);
+  box-shadow: 0 10px 30px #061e331a;
+}
+.about-stamp strong {
+  color: #88cbef;
+  font-weight: 600;
+}
+.catalog-section {
+  padding-block: 54px;
+  background: #edf4f8;
+}
+.catalog-inner {
+  padding: 34px 38px;
+  background: #fff;
+  border: 1px solid #d7e4ed;
+  border-left: 4px solid var(--blue);
+  border-radius: 8px;
+  box-shadow: 0 6px 24px #133d5810;
+}
+.catalog-icon {
+  background: #edf5fa;
+  border: none;
+}
+.catalog-copy h2 {
+  font-size: clamp(24px, 2.3vw, 31px);
+}
+.catalog-copy .eyebrow {
+  font-size: 13px;
+}
+.desktop-nav a {
+  position: relative;
+}
+.desktop-nav a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--blue);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s;
+}
+.desktop-nav a:hover:after,
+.desktop-nav a:focus-visible:after {
+  transform: scaleX(1);
+}
+@media (max-width: 900px) {
+  .catalog-inner > .button {
+    margin-left: 108px;
+  }
+  .catalog-copy {
+    min-width: 220px;
+  }
+}
+@media (max-width: 650px) {
+  .products-section .section-heading {
+    margin-bottom: 28px;
+  }
+  .about-visual {
+    aspect-ratio: 4 / 3;
+    min-height: 0;
+  }
+  .about-stamp {
+    right: -5px;
+    bottom: 18px;
+    padding: 16px 18px;
+  }
+  .about-figure figcaption {
+    font-size: 12px;
+  }
+  .catalog-section {
+    padding-block: 35px;
+  }
+  .catalog-inner {
+    padding: 26px 22px;
+    gap: 18px;
+  }
+  .catalog-icon {
+    width: 46px;
+    height: 62px;
+  }
+  .catalog-copy {
+    min-width: 0;
+  }
+  .catalog-copy h2 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  .catalog-copy .eyebrow {
+    font-size: 12px;
+  }
+  .catalog-copy p:last-child {
+    font-size: 16px;
+  }
+  .catalog-inner > .button {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 6px;
+    font-size: 15px;
   }
 }

@@ -9,7 +9,10 @@ export default function Catalog() {
         <div className="catalog-copy">
           <p className="eyebrow">TEKNİK DOKÜMANLAR</p>
           <h2>Tüm ürün ailesi, tek katalogda.</h2>
-          <p>GF Hakan Plastik ürünlerini ve teknik detaylarını inceleyin.</p>
+          <p>
+            Ürün seçenekleri, sistem bilgileri ve teknik detaylar elinizin
+            altında.
+          </p>
         </div>
         <a
           href="/pdf/gf-katalog.pdf"

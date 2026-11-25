@@ -1,5 +1,3 @@
-"use client";
-import { useState } from "react";
 import Image from "next/image";
 import { FileText, MessageCircle } from "lucide-react";
 const products = [
@@ -46,18 +44,7 @@ const products = [
     text: "Yaşam alanları için yerden ısıtma sistem çözümleri.",
   },
 ];
-const categories = [
-  "Tüm ürünler",
-  "Sessiz boru",
-  "Atık su",
-  "Temiz su",
-  "Isıtma",
-];
 export default function Products() {
-  const [category, setCategory] = useState("Tüm ürünler");
-  const visible = products.filter(
-    (p) => category === "Tüm ürünler" || p.category === category,
-  );
   return (
     <section id="urunler" className="section products-section">
       <div className="shell">
@@ -76,26 +63,8 @@ export default function Products() {
             İhtiyacınıza uygun sistem için birlikte doğru seçimi yapalım.
           </p>
         </div>
-        <div
-          className="product-filters"
-          role="group"
-          aria-label="Ürün kategorileri"
-        >
-          {categories.map((c) => (
-            <button
-              key={c}
-              aria-pressed={category === c}
-              onClick={() => setCategory(c)}
-            >
-              {c}
-            </button>
-          ))}
-        </div>
-        <p className="sr-only" role="status">
-          {visible.length} ürün gösteriliyor.
-        </p>
         <div className="product-grid">
-          {visible.map((p) => (
+          {products.map((p) => (
             <article className="product-card" key={p.title}>
               <div className="product-image">
                 <Image

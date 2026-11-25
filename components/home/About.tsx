@@ -4,22 +4,25 @@ export default function About() {
   return (
     <section id="hakkimizda" className="section about-section">
       <div className="shell about-grid">
-        <div className="about-visual">
-          <Image
-            src="/images/aska-depo-yeni.png"
-            alt="Antalya Aska Boru deposu ve GF Hakan Plastik tabelası"
-            fill
-            sizes="(max-width:900px) 100vw, 50vw"
-          />
-          <div className="about-stamp">
-            <strong>2016</strong>
-            <span>
-              yılından beri
-              <br />
-              aynı güvenle.
-            </span>
+        <figure className="about-figure">
+          <div className="about-visual">
+            <Image
+              src="/images/hakkimizda-2.png"
+              alt="Akşam ışığında cam cepheli modern bir lojistik yapısının temsili görünümü"
+              fill
+              sizes="(max-width:900px) 100vw, 50vw"
+            />
+            <div className="about-stamp">
+              <strong>2016</strong>
+              <span>
+                yılından beri
+                <br />
+                aynı güvenle.
+              </span>
+            </div>
           </div>
-        </div>
+          <figcaption>Tedarik ve lojistik · Temsili görsel</figcaption>
+        </figure>
         <div className="about-copy">
           <p className="eyebrow">BİZ ASKA BORU’YUZ</p>
           <h2>
