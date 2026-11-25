@@ -16,10 +16,12 @@ export const metadata: Metadata = {
   },
 
   title: {
-    default: "Aska Boru | GF Hakan Plastik Yetkili Bayi Antalya",
+    default: "GF Hakan Plastik Antalya Bayisi | Aska Boru",
 
     template: "%s | Aska Boru",
   },
+
+  alternates: { canonical: "/" },
 
   description:
     "Aska Boru, Antalya'da GF Hakan Plastik yetkili bayisi olarak PVC boru sistemleri, temiz su, atık su, sessiz boru ve yerden ısıtma çözümleri sunmaktadır.",
@@ -79,7 +81,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Aska Boru | GF Hakan Plastik Yetkili Bayi Antalya",
+    title: "GF Hakan Plastik Antalya Bayisi | Aska Boru",
 
     description:
       "GF Hakan Plastik ürünleriyle altyapı ve üstyapı projeleri için profesyonel boru sistemleri çözümleri.",
@@ -108,7 +110,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "Aska Boru | GF Hakan Plastik Yetkili Bayi Antalya",
+    title: "GF Hakan Plastik Antalya Bayisi | Aska Boru",
 
     description: "Profesyonel plastik boru sistemleri ve altyapı çözümleri.",
 

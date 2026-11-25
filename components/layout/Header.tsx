@@ -3,11 +3,11 @@ import { useState } from "react";
 import Image from "next/image";
 import { Menu, X, MessageCircle } from "lucide-react";
 const links = [
-  ["Anasayfa", "#anasayfa"],
-  ["Kurumsal", "#hakkimizda"],
-  ["Ürünlerimiz", "#urunler"],
-  ["Katalog", "#katalog"],
-  ["İletişim", "#iletisim"],
+  ["Anasayfa", "/#anasayfa"],
+  ["Kurumsal", "/#hakkimizda"],
+  ["Ürünlerimiz", "/urunler"],
+  ["Katalog", "/#katalog"],
+  ["İletişim", "/#iletisim"],
 ];
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -20,7 +20,7 @@ export default function Header() {
     >
       <div className="shell header-inner">
         <a
-          href="#anasayfa"
+          href="/#anasayfa"
           aria-label="Aska Boru anasayfa"
           className="brand-logo"
         >
@@ -39,7 +39,7 @@ export default function Header() {
             </a>
           ))}
         </nav>
-        <a className="button button-blue header-quote" href="#iletisim">
+        <a className="button button-blue header-quote" href="/#iletisim">
           <MessageCircle size={18} /> Teklif alın
         </a>
         <button
@@ -59,7 +59,7 @@ export default function Header() {
               {label}
             </a>
           ))}
-          <a href="#iletisim" onClick={() => setOpen(false)}>
+          <a href="/#iletisim" onClick={() => setOpen(false)}>
             Teklif alın
           </a>
         </nav>

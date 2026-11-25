@@ -47,14 +47,14 @@ export default function Hero() {
               <span /> GF HAKAN PLASTİK YETKİLİ BAYİSİ
             </p>
             <h1>
-              Güçlü projelerin
+              Plastik boruda
               <br />
-              <em>güvenilir bağlantısı.</em>
+              <em>güvenilir bağlantınız.</em>
             </h1>
             <p className="hero-description">
-              Temiz sudan atık suya, sessiz borudan yerden ısıtmaya.
-              <br className="desktop-break" /> Projenizin her aşamasında doğru
-              ürün, güçlü tedarik.
+              Antalya’da GF Hakan Plastik yetkili bayiniz.
+              <br className="desktop-break" /> PVC, temiz su, sessiz boru ve
+              yerden ısıtma çözümleri.
             </p>
             <div className="hero-actions">
               <a href="#urunler" className="button button-blue">

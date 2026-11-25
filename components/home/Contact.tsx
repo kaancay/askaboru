@@ -42,6 +42,13 @@ export default function Contact() {
                 <strong>info@askaboru.com</strong>
               </span>
             </a>
+            <a href="mailto:askaboru@gmail.com">
+              <Mail size={22} />
+              <span>
+                <small>ALTERNATİF E-POSTA</small>
+                <strong>askaboru@gmail.com</strong>
+              </span>
+            </a>
             <a href="#harita">
               <MapPin size={22} />
               <span>

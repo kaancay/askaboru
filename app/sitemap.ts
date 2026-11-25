@@ -1,44 +1,11 @@
 import type { MetadataRoute } from "next";
-
-
+import { products } from "@/lib/products";
+import { site } from "@/lib/site";
 export default function sitemap(): MetadataRoute.Sitemap {
-
-
-  return [
-
-    {
-
-      url:
-        "https://www.askaboru.com",
-
-      lastModified:
-        new Date(),
-
-    },
-
-
-    {
-
-      url:
-        "https://www.askaboru.com/#urunler",
-
-      lastModified:
-        new Date(),
-
-    },
-
-
-    {
-
-      url:
-        "https://www.askaboru.com/#iletisim",
-
-      lastModified:
-        new Date(),
-
-    },
-
-
-  ];
-
+  return ["", "/urunler", ...products.map((p) => `/urunler/${p.slug}`)].map(
+    (path) => ({
+      url: `${site.url}${path || "/"}`,
+      lastModified: site.updated,
+    }),
+  );
 }

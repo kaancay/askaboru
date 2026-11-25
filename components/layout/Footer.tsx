@@ -20,22 +20,23 @@ export default function Footer() {
           </div>
           <div>
             <h3>Keşfedin</h3>
-            <a href="#hakkimizda">Hakkımızda</a>
-            <a href="#urunler">Ürünlerimiz</a>
-            <a href="#katalog">Ürün kataloğu</a>
-            <a href="#iletisim">İletişim</a>
+            <a href="/#hakkimizda">Hakkımızda</a>
+            <a href="/urunler">Ürünlerimiz</a>
+            <a href="/#katalog">Ürün kataloğu</a>
+            <a href="/#iletisim">İletişim</a>
           </div>
           <div>
             <h3>Ürün çözümleri</h3>
-            <a href="#urunler">Sessiz boru sistemleri</a>
-            <a href="#urunler">PVC atık su sistemleri</a>
-            <a href="#urunler">Temiz su sistemleri</a>
-            <a href="#urunler">Yerden ısıtma</a>
+            <a href="/urunler/silenta-3a">Sessiz boru sistemleri</a>
+            <a href="/urunler/pvc-atik-su-boru">PVC atık su sistemleri</a>
+            <a href="/urunler/aquasystem-ppr-boru">Temiz su sistemleri</a>
+            <a href="/urunler/yerden-isitma-sistemleri">Yerden ısıtma</a>
           </div>
           <div>
             <h3>Bize ulaşın</h3>
             <a href="tel:+902423381666">(0242) 338 16 66</a>
             <a href="mailto:info@askaboru.com">info@askaboru.com</a>
+            <a href="mailto:askaboru@gmail.com">askaboru@gmail.com</a>
             <p>
               Pazartesi – Cumartesi
               <br />

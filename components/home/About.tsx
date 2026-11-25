@@ -38,6 +38,11 @@ export default function About() {
             Temiz su, atık su, sessiz boru ve yerden ısıtma sistemlerinde ürün
             tedariğinden teknik danışmanlığa kadar yanınızdayız.
           </p>
+          <p>
+            Toptan boru ve ek parça taleplerinde ürün serisi, çap ve miktarı
+            birlikte değerlendiriyor; proje malzeme listeniz için tedarik ve
+            sevkiyat bilgisi sunuyoruz.
+          </p>
           <ul className="check-list">
             <li>
               <Check size={18} /> GF Hakan Plastik yetkili bayi güvencesi
