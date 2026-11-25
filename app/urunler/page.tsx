@@ -8,9 +8,9 @@ import JsonLd from "@/components/shared/JsonLd";
 import { products } from "@/lib/products";
 import { site } from "@/lib/site";
 export const metadata: Metadata = {
-  title: "Plastik Boru Sistemleri ve GF Hakan Plastik Ürünleri",
+  title: "Plastik Boru ve GF Hakan Plastik Ürünleri",
   description:
-    "Antalya Aska Boru’da GF Hakan Plastik ürünleri: Silenta sessiz boru, PVC atık su, Aquasystem PP-R / PP-RCT ve yerden ısıtma. Katalogları ve seçim rehberini inceleyin.",
+    "Antalya Aska Boru’da GF Hakan Plastik ürünleri: Silenta sessiz boru, PVC atık su, Aquasystem PP-R ve yerden ısıtma. Teknik katalogları inceleyin.",
   alternates: { canonical: "/urunler" },
   openGraph: {
     title: "Plastik Boru Sistemleri | Aska Boru Antalya",
@@ -91,7 +91,7 @@ export default function ProductIndex() {
         </section>
         <section className="section products-section">
           <div className="shell">
-            <ProductGrid />
+            <ProductGrid headingLevel="h2" />
           </div>
         </section>
         <section className="section">

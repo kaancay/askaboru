@@ -3,9 +3,12 @@ import { Layers } from "lucide-react";
 import { products, type PipeProduct } from "@/lib/products";
 export default function ProductGrid({
   items = products,
+  headingLevel = "h3",
 }: {
   items?: PipeProduct[];
+  headingLevel?: "h2" | "h3";
 }) {
+  const Heading = headingLevel;
   return (
     <div className="product-grid">
       {items.map((p) => (
@@ -24,9 +27,9 @@ export default function ProductGrid({
           </a>
           <div className="product-content">
             <span className="product-category">{p.category}</span>
-            <h3>
+            <Heading className="product-title">
               <a href={`/urunler/${p.slug}`}>{p.title}</a>
-            </h3>
+            </Heading>
             <p>{p.text}</p>
             <a className="product-link" href={`/urunler/${p.slug}`}>
               <Layers size={17} /> Ürünü inceleyin

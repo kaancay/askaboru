@@ -163,7 +163,7 @@ export const products = [
     pdf: "ppr",
     text: "Sıcak ve soğuk su tesisatlarına yönelik PP-R ve PP-RCT sistem çözümleri.",
     heading: "Aquasystem PP-R ve PP-RCT Boru",
-    seoTitle: "Aquasystem PP-R / PP-RCT Temiz Su Borusu | Antalya",
+    seoTitle: "Aquasystem PP-R / PP-RCT Boru | Antalya",
     description:
       "Aquasystem PP-R ve PP-RCT temiz su boruları: Antalya GF Hakan Plastik yetkili bayisi Aska Boru. Boru ve ek parça kataloğu, ürün bilgisi ve fiyat teklifi.",
     intro:

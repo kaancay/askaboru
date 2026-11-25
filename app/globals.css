@@ -547,7 +547,7 @@ a.button-glass:hover {
   font-weight: 550;
   color: var(--blue);
 }
-.product-content h3 {
+.product-content .product-title {
   margin-top: 8px;
   font-size: 21px;
   font-weight: 650;
@@ -1582,7 +1582,7 @@ main section[id] {
   font-size: 12px;
   letter-spacing: 0.09em;
 }
-.product-content h3 {
+.product-content .product-title {
   line-height: 1.35;
 }
 .product-content p {
