@@ -116,11 +116,14 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/logos/aska-logo-round.png",
-
-    shortcut: "/logos/aska-logo-round.png",
-
-    apple: "/logos/aska-logo-round.png",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml", sizes: "any" },
+      { url: "/favicon-96x96.png", type: "image/png", sizes: "96x96" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" },
+    ],
   },
 };
 
