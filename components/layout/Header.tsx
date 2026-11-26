@@ -39,7 +39,7 @@ export default function Header() {
             </a>
           ))}
         </nav>
-        <a className="button button-blue header-quote" href="/#iletisim">
+        <a className="button header-quote" href="/#iletisim">
           <MessageCircle size={18} /> Teklif alın
         </a>
         <button

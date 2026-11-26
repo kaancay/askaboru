@@ -12,6 +12,7 @@ import Contact from "@/components/home/Contact";
 import Map from "@/components/home/Map";
 import FAQ from "@/components/home/FAQ";
 import JsonLd from "@/components/shared/JsonLd";
+import { site } from "@/lib/site";
 
 import FloatingWhatsApp from "@/components/shared/FloatingWhatsApp";
 import RemembranceModal from "@/components/shared/RemembranceModal";
@@ -38,8 +39,11 @@ const jsonLd = {
       },
       description:
         "Antalya’da GF Hakan Plastik yetkili bayisi. PVC atık su, Aquasystem PP-R / PP-RCT, Silenta sessiz boru ve yerden ısıtma ürünleri tedariği.",
-      areaServed: { "@type": "Country", name: "Türkiye" },
-      hasMap: "https://www.google.com/maps?cid=3266340276825931263",
+      areaServed: [
+        { "@type": "City", name: "Antalya" },
+        { "@type": "Country", name: "Türkiye" },
+      ],
+      hasMap: site.mapsUrl,
       geo: {
         "@type": "GeoCoordinates",
         latitude: 36.9086596,

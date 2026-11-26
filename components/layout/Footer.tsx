@@ -23,6 +23,7 @@ export default function Footer() {
             <a href="/#hakkimizda">Hakkımızda</a>
             <a href="/urunler">Ürünlerimiz</a>
             <a href="/#katalog">Ürün kataloğu</a>
+            <a href="/#harita">Antalya bayimiz ve ulaşım</a>
             <a href="/#iletisim">İletişim</a>
           </div>
           <div>

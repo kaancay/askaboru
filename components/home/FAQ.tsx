@@ -4,6 +4,10 @@ const questions = [
     a: "Aska Boru, Muratpaşa / Antalya’da GF Hakan Plastik yetkili bayisi olarak hizmet verir. PVC atık su, Aquasystem PP-R / PP-RCT, Silenta sessiz boru ve yerden ısıtma ürünleri için ekibimize ulaşabilirsiniz.",
   },
   {
+    q: "Antalya bayiniz cumartesi açık mı, gelmeden önce ne yapmalıyım?",
+    a: "Antalya merkezimiz hafta içi 08:00–18:00, cumartesi 08:00–13:00 saatlerinde hizmet verir. İhtiyacınız olan ürün serisi, çap ve miktarı telefon veya WhatsApp üzerinden paylaşarak güncel stok ve teslimat bilgisini öğrenebilirsiniz. Perakende satış sınırlıdır; önceliğimiz kurumsal ve toptan taleplerdir.",
+  },
+  {
     q: "Plastik boru fiyatı ve güncel fiyat listesi nasıl öğrenilir?",
     a: "Fiyat; ürün serisi, çap, boru boyu, metraj ve ek parça adetlerine göre değişir. Ürün kataloğundan ihtiyacınızı belirleyip malzeme listenizi WhatsApp veya e-posta üzerinden göndererek güncel fiyat, stok ve sevkiyat bilgisi isteyebilirsiniz.",
   },
