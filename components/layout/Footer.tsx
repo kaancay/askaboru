@@ -38,9 +38,9 @@ export default function Footer() {
             <a href="mailto:info@askaboru.com">info@askaboru.com</a>
             <a href="mailto:askaboru@gmail.com">askaboru@gmail.com</a>
             <p>
-              Pazartesi – Cumartesi
+              Pazartesi – Cuma: 08:00 – 18:00
               <br />
-              08:00 – 18:00
+              Cumartesi: 08:00 – 13:00
             </p>
           </div>
         </div>
