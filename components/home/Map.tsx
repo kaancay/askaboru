@@ -1,4 +1,4 @@
-import { Clock3, MapPin, Phone, MessageSquareText } from "lucide-react";
+import { Clock3, MapPin, Phone } from "lucide-react";
 import { site } from "@/lib/site";
 export default function Map() {
   return (
@@ -69,24 +69,6 @@ export default function Map() {
               allowFullScreen
             />
           </div>
-        </div>
-        <div className="dealer-feedback review-invite">
-          <div className="review-invite-icon">
-            <MessageSquareText size={30} strokeWidth={1.5} aria-hidden="true" />
-          </div>
-          <div className="review-invite-copy">
-            <p className="eyebrow">GOOGLE YORUMLARI</p>
-            <h3>Deneyiminiz bizim için değerli.</h3>
-            <p>Görüşlerinizi paylaşın, yeni müşterilerimize yol gösterin.</p>
-          </div>
-          <a
-            className="button button-blue"
-            href={site.reviewUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Google’da yorum yazın
-          </a>
         </div>
       </div>
     </section>
