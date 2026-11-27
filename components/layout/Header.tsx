@@ -5,10 +5,12 @@ import { Menu, X, MessageCircle } from "lucide-react";
 const leftLinks = [
   ["Anasayfa", "/#anasayfa"],
   ["Kurumsal", "/#hakkimizda"],
+  ["Katalog", "/#katalog"],
 ];
 const rightLinks = [
   ["Ürünlerimiz", "/urunler"],
   ["İletişim", "/#iletisim"],
+  ["Konum", "/#harita"],
 ];
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -53,7 +55,7 @@ export default function Header() {
         <div className="header-right">
           <nav
             className="desktop-nav nav-right"
-            aria-label="Ürünler ve iletişim"
+            aria-label="Ürünler, iletişim ve konum"
           >
             {rightLinks.map(([label, href]) => (
               <a key={href} href={href}>

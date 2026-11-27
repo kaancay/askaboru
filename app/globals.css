@@ -2299,7 +2299,7 @@ a.floating-whatsapp:hover {
 }
 .centered-header .desktop-nav {
   display: flex;
-  gap: 36px;
+  gap: 28px;
   margin: 0;
 }
 .centered-header .desktop-nav a {
@@ -2310,15 +2310,15 @@ a.floating-whatsapp:hover {
   grid-column: 1;
   grid-row: 1;
   justify-self: end;
-  padding-right: 40px;
+  padding-right: 16px;
 }
 .centered-header .header-right {
   grid-column: 3;
   grid-row: 1;
   display: flex;
   align-items: center;
-  gap: 32px;
-  padding-left: 40px;
+  gap: 24px;
+  padding-left: 16px;
 }
 .centered-header .header-quote {
   margin: 0 0 0 auto;
@@ -2754,6 +2754,36 @@ a.floating-whatsapp:hover {
   .delivery-inner > .button {
     grid-column: 2;
     justify-self: start;
+  }
+}
+@media (min-width: 901px) and (max-width: 1200px) {
+  .centered-header .header-inner {
+    gap: 16px;
+  }
+  .centered-header .brand-logo img {
+    width: 108px;
+    height: 108px;
+  }
+  .centered-header .desktop-nav {
+    gap: 16px;
+  }
+  .centered-header .desktop-nav a {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .centered-header .nav-left,
+  .centered-header .header-right {
+    padding: 0;
+  }
+  .centered-header .header-right {
+    gap: 14px;
+  }
+  .centered-header .header-quote {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+  .centered-header .header-quote svg {
+    display: none;
   }
 }
 @media (max-width: 900px) {
