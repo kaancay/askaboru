@@ -10,6 +10,7 @@ import Catalog from "@/components/home/Catalog";
 import Contact from "@/components/home/Contact";
 import ProjectSupport from "@/components/home/ProjectSupport";
 import Map from "@/components/home/Map";
+import FAQ from "@/components/home/FAQ";
 import JsonLd from "@/components/shared/JsonLd";
 import { site } from "@/lib/site";
 
@@ -112,6 +113,8 @@ export default function Home() {
         <References />
 
         <ProjectSupport />
+
+        <FAQ />
 
         <Contact />
 

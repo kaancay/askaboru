@@ -2088,13 +2088,52 @@ a.button-outline:hover {
   margin-block: 20px 25px;
 }
 .faq-section {
-  background: #fff;
+  background: #f0f5f9;
   border-bottom: 1px solid var(--line);
 }
 .faq-grid {
   display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: 85px;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr);
+  gap: 64px;
+  align-items: start;
+}
+.faq-heading h2 {
+  font-size: clamp(34px, 3.4vw, 46px);
+  line-height: 1.15;
+}
+.faq-heading .text-link {
+  font-size: 15px;
+  line-height: 1.7;
+}
+.faq-section .faq-list {
+  display: grid;
+  gap: 12px;
+}
+.faq-section .faq-list details {
+  border: 1px solid #d5e2ec;
+  border-radius: 10px;
+  background: #fff;
+}
+.faq-section .faq-list details[open] {
+  border-color: #9fc4dc;
+  box-shadow: 0 5px 18px #133d5808;
+}
+.faq-section .faq-list summary {
+  padding: 20px 55px 20px 22px;
+}
+.faq-section .faq-list summary:after {
+  right: 22px;
+  top: 18px;
+}
+.faq-section .faq-list summary:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: -4px;
+  border-radius: 8px;
+}
+.faq-section .faq-list details p {
+  margin: 0;
+  padding: 0 22px 22px;
+  line-height: 1.75;
 }
 .faq-intro {
   font-size: 16px;
