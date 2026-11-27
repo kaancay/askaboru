@@ -119,12 +119,24 @@ export const metadata: Metadata = {
 
   icons: {
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml", sizes: "any" },
-      { url: "/favicon-96x96.png", type: "image/png", sizes: "96x96" },
+      {
+        url: "/favicon.svg?v=aska-round-2",
+        type: "image/svg+xml",
+        sizes: "any",
+      },
+      {
+        url: "/favicon-96x96.png?v=aska-round-2",
+        type: "image/png",
+        sizes: "96x96",
+      },
     ],
-    shortcut: "/favicon.ico",
+    shortcut: "/favicon.ico?v=aska-round-2",
     apple: [
-      { url: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" },
+      {
+        url: "/apple-touch-icon.png?v=aska-round-2",
+        type: "image/png",
+        sizes: "180x180",
+      },
     ],
   },
 };
