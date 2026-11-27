@@ -2412,64 +2412,77 @@ a.floating-whatsapp:hover {
 .product-image img {
   object-fit: contain;
 }
-.catalog-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 240px;
-  gap: 40px;
-  align-items: center;
-  padding: 28px 32px;
-  background: #fff;
-  border: 1px solid #d7e4ed;
-  border-left: 4px solid var(--blue);
-  border-radius: 8px;
-  box-shadow: 0 6px 24px #133d5810;
-}
-.catalog-layout .catalog-inner {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: 22px;
-  padding: 0;
-  background: transparent;
+.catalog-section.catalog-simple {
+  padding-block: 38px;
   border: 0;
-  box-shadow: none;
+  background: linear-gradient(110deg, #072b43, #0c4665);
+  color: #fff;
 }
-.catalog-layout .catalog-icon {
-  width: 60px;
-  height: 68px;
+.catalog-simple-inner {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+  padding: 28px 36px;
+  background: #ffffff05;
+  border: 1px solid #ffffff26;
+  border-radius: 12px;
 }
-.catalog-layout .catalog-copy {
-  min-width: 0;
+.catalog-simple-icon {
+  width: 58px;
+  height: 66px;
+  display: grid;
+  place-items: center;
+  color: #a0d9f6;
+  background: #ffffff0a;
+  border: 1px solid #ffffff26;
+  border-radius: 10px;
 }
-.catalog-layout .catalog-inner > .button {
-  grid-column: 1 / -1;
-  justify-self: start;
-  margin: 0;
-  width: fit-content;
-  font-size: 15px;
+.catalog-simple-copy .eyebrow {
+  font-size: 13px;
+  margin-bottom: 7px;
+  color: #94cce9;
 }
-@media (min-width: 651px) and (max-width: 900px) {
-  .catalog-layout {
-    grid-template-columns: minmax(0, 1fr) 200px;
-    gap: 28px;
-    padding: 24px;
-  }
+.catalog-simple-copy h2 {
+  font-size: 28px;
+  line-height: 1.2;
+}
+.catalog-simple-copy > p:last-child {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #c8dbe6;
+}
+.catalog-simple-inner > .button {
+  background: #e9f5ff;
+  color: #073b60;
+  white-space: nowrap;
+}
+.catalog-simple-inner > .button:hover {
+  background: #fff;
+}
+.catalog-simple .pdf-label {
+  border-color: #073b6040;
 }
 @media (max-width: 650px) {
-  .catalog-layout {
-    grid-template-columns: 1fr;
-    gap: 24px;
+  .catalog-section.catalog-simple {
+    padding-block: 30px;
+  }
+  .catalog-simple-inner {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 20px 16px;
     padding: 24px 20px;
   }
-  .catalog-layout .catalog-inner {
-    gap: 20px;
+  .catalog-simple-icon {
+    width: 48px;
+    height: 58px;
   }
-  .catalog-layout .catalog-inner > .button {
-    width: 100%;
+  .catalog-simple-copy h2 {
+    font-size: 24px;
   }
-  .catalog-layout .catalog-poster {
+  .catalog-simple-inner > .button {
+    grid-column: 1 / -1;
     width: 100%;
-    max-width: 320px;
-    justify-self: center;
   }
 }
 .catalog-feature {
