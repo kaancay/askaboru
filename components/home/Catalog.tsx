@@ -33,7 +33,7 @@ export default function Catalog() {
             alt="GF Hakan Plastik boru ve bağlantı elemanları"
             width={1200}
             height={1200}
-            sizes="(max-width:650px) 320px, 300px"
+            sizes="(max-width:650px) 320px, 240px"
           />
         </figure>
       </div>
