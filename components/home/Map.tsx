@@ -56,7 +56,7 @@ export default function Map() {
               <Phone size={18} aria-hidden="true" /> (0242) 338 16 66
             </a>
             <p className="dealer-visit-note">
-              Gelmeden önce ürün ve stok bilgisi için arayabilirsiniz.
+              Ziyaretiniz öncesinde bizimle iletişime geçebilirsiniz.
             </p>
           </div>
           <div className="map-frame">
