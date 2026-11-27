@@ -1,104 +1,69 @@
 import Image from "next/image";
-import {
-  ShieldCheck,
-  Truck,
-  Headset,
-  PackageCheck,
-  FileText,
-} from "lucide-react";
-const features = [
-  {
-    icon: ShieldCheck,
-    title: "Yetkili bayi güvencesi",
-    text: "GF Hakan Plastik",
-  },
-  {
-    icon: PackageCheck,
-    title: "Güçlü ürün tedariği",
-    text: "Projenize uygun çözümler",
-  },
-  {
-    icon: Truck,
-    title: "Türkiye geneline sevkiyat",
-    text: "Antalya merkezli dağıtım",
-  },
-  {
-    icon: Headset,
-    title: "Teknik danışmanlık",
-    text: "Ürün seçiminde yanınızdayız",
-  },
-];
+import { FileText, Truck } from "lucide-react";
 export default function Hero() {
   return (
     <>
-      <section id="anasayfa" className="hero">
+      <section id="anasayfa" className="hero dealer-hero">
         <Image
           className="hero-image"
           src="/images/aska-giris-1.png"
-          alt="GF boru ve bağlantı elemanları"
+          alt="GF Hakan Plastik boru ve bağlantı elemanları"
           fill
-          priority
+          preload
           sizes="100vw"
         />
         <div className="hero-shade" />
         <div className="shell hero-inner">
           <div className="hero-content">
-            <p className="eyebrow light">
-              <span /> GF HAKAN PLASTİK YETKİLİ BAYİSİ
-            </p>
+            <p className="eyebrow light">ANTALYA · ASKA BORU</p>
             <h1>
-              Plastik boruda
+              <span>GF Hakan Plastik</span>
               <br />
-              <em>güvenilir bağlantınız.</em>
+              <em>Yetkili Bayisi.</em>
             </h1>
             <p className="hero-description">
-              Antalya’da GF Hakan Plastik yetkili bayiniz.
-              <br className="desktop-break" /> PVC, temiz su, sessiz boru ve
-              yerden ısıtma çözümleri.
+              Boru ve ek parçada doğru ürün, doğrudan tedarik.
+              <br />
+              2016’dan bu yana projelerinizin yanındayız.
             </p>
             <div className="hero-actions">
               <a href="#urunler" className="button button-blue">
-                Ürünleri keşfedin
+                Ürünlerimizi inceleyin
               </a>
-              <a
-                href="/pdf/gf-katalog.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="button button-glass"
-              >
-                <FileText size={18} /> Ürün kataloğu
+              <a href="#katalog" className="button button-glass">
+                <FileText size={19} aria-hidden="true" /> Ürün kataloğu
               </a>
             </div>
-            <div className="hero-signature">
-              <span className="gf-mark">+GF+</span>
-              <span>
-                Hakan Plastik<small>Kaliteyi projenizle buluşturuyoruz.</small>
-              </span>
-            </div>
-          </div>
-          <div className="hero-caption">
-            <span>BİRBİRİNE BAĞLANAN ÇÖZÜMLER</span>
-            <p>
-              Sağlam bir gelecek,
-              <br />
-              doğru bağlantıyla başlar.
-            </p>
           </div>
         </div>
       </section>
-      <div className="trust-strip">
-        <div className="shell trust-grid">
-          {features.map((f) => (
-            <div className="trust-item" key={f.title}>
-              <f.icon size={28} strokeWidth={1.5} />
-              <div>
-                <strong>{f.title}</strong>
-                <span>{f.text}</span>
-              </div>
-            </div>
-          ))}
+      <section
+        className="delivery-strip"
+        id="teslimat"
+        aria-labelledby="delivery-heading"
+      >
+        <div className="shell delivery-inner">
+          <div className="delivery-icon">
+            <Truck size={34} strokeWidth={1.5} aria-hidden="true" />
+          </div>
+          <div className="delivery-copy">
+            <h2 id="delivery-heading">Antalya içi gün içinde teslimat.</h2>
+            <p>Projenizde eksik kalan boru ve ek parçaları tamamlayın.</p>
+            <small>
+              Stok ve teslimat adresine göre planlanır. Türkiye geneline
+              sevkiyat yapılır.
+            </small>
+          </div>
+          <a
+            className="button button-outline"
+            href="https://wa.me/905374198285?text=Merhaba%2C%20Antalya%27daki%20projem%20i%C3%A7in%20g%C3%BCn%20i%C3%A7inde%20teslimat%20bilgisi%20almak%20istiyorum."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Teslimat bilgisi alın
+          </a>
         </div>
-      </div>
+      </section>
     </>
   );
 }

@@ -8,54 +8,41 @@ export default function About() {
           <div className="about-visual">
             <Image
               src="/images/hakkimizda-2.png"
-              alt="Akşam ışığında cam cepheli modern bir lojistik yapısının temsili görünümü"
-              fill
+              alt="Modern bir lojistik yapısının temsili görünümü"
+              width={1672}
+              height={941}
               sizes="(max-width:900px) 100vw, 50vw"
             />
-            <div className="about-stamp">
-              <strong>2016</strong>
-              <span>
-                yılından beri
-                <br />
-                aynı güvenle.
-              </span>
-            </div>
           </div>
           <figcaption>Tedarik ve lojistik · Temsili görsel</figcaption>
         </figure>
         <div className="about-copy">
-          <p className="eyebrow">BİZ ASKA BORU’YUZ</p>
+          <p className="eyebrow">2016’DAN BU YANA · ASKA BORU</p>
           <h2>
-            İşimizin temelinde
+            Antalya’daki
             <br />
-            <span>güven var.</span>
+            <span>çözüm ortağınız.</span>
           </h2>
           <p>
-            2016 yılından bu yana Antalya merkezli olarak, GF Hakan Plastik
-            yetkili bayi kimliğimizle projeleri doğru ürünlerle buluşturuyoruz.
-          </p>
-          <p>
-            Temiz su, atık su, sessiz boru ve yerden ısıtma sistemlerinde ürün
-            tedariğinden teknik danışmanlığa kadar yanınızdayız.
-          </p>
-          <p>
-            Toptan boru ve ek parça taleplerinde ürün serisi, çap ve miktarı
-            birlikte değerlendiriyor; proje malzeme listeniz için tedarik ve
-            sevkiyat bilgisi sunuyoruz.
+            GF Hakan Plastik yetkili bayisi olarak temiz su, atık su, sessiz
+            boru ve yerden ısıtma sistemlerinde ürün tedariği sağlıyoruz.
           </p>
           <ul className="check-list">
             <li>
-              <Check size={18} /> GF Hakan Plastik yetkili bayi güvencesi
+              <Check size={18} aria-hidden="true" /> Toptan boru ve ek parça
+              tedariği
             </li>
             <li>
-              <Check size={18} /> Türkiye genelindeki projelere ürün tedariği
+              <Check size={18} aria-hidden="true" /> Ürün seçiminde doğrudan
+              destek
             </li>
             <li>
-              <Check size={18} /> İhtiyaca odaklı ürün seçimi ve destek
+              <Check size={18} aria-hidden="true" /> Antalya içi teslimat,
+              Türkiye geneline sevkiyat
             </li>
           </ul>
           <a href="#iletisim" className="text-link">
-            Projenizi konuşalım
+            Bizimle iletişime geçin
           </a>
         </div>
       </div>

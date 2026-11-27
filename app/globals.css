@@ -2239,3 +2239,725 @@ a.floating-whatsapp:hover {
     font-size: 32px;
   }
 }
+
+/* Centered dealer identity and concise home presentation. */
+.topbar {
+  background: linear-gradient(105deg, #061e33 0%, #0b3d61 55%, #075b84 100%);
+}
+.centered-header {
+  background: linear-gradient(110deg, #eaf3f9 0%, #ffffff 45%, #f0f7fc 100%);
+  border-bottom-color: #cadfeb;
+  box-shadow: 0 4px 20px #123c5610;
+}
+.topbar-inner {
+  min-height: 40px;
+  gap: 18px;
+}
+.topbar-inner > a {
+  font-size: 14px;
+  font-weight: 450;
+  white-space: nowrap;
+}
+.topbar a:hover {
+  color: #7dd6ff;
+}
+.topbar-map-label {
+  opacity: 0.75;
+}
+.centered-header .header-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  height: 120px;
+  gap: 32px;
+}
+.centered-header .brand-logo {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+}
+.centered-header .brand-logo img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+.centered-header .desktop-nav {
+  display: flex;
+  gap: 36px;
+  margin: 0;
+}
+.centered-header .desktop-nav a {
+  font-size: 16px;
+  padding-block: 16px;
+}
+.centered-header .nav-left {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: end;
+  padding-right: 40px;
+}
+.centered-header .header-right {
+  grid-column: 3;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding-left: 40px;
+}
+.centered-header .header-quote {
+  margin: 0 0 0 auto;
+  white-space: nowrap;
+}
+.centered-header .menu-toggle {
+  display: none;
+}
+.dealer-hero .hero-inner {
+  min-height: 530px;
+}
+.dealer-hero .hero-content {
+  padding-block: 70px;
+  max-width: 740px;
+}
+.dealer-hero .eyebrow {
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+.dealer-hero h1 {
+  font-size: clamp(44px, 4.6vw, 68px);
+  line-height: 1.1;
+  font-weight: 650;
+}
+.dealer-hero h1 span {
+  color: white;
+  font-size: 0.79em;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+.dealer-hero h1 em {
+  display: inline-block;
+  margin-top: 9px;
+}
+.dealer-hero .hero-description {
+  max-width: 520px;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-top: 26px;
+}
+.dealer-hero .hero-actions {
+  margin-top: 30px;
+}
+.delivery-strip {
+  padding-block: 30px;
+  background: #edf6fb;
+  border-bottom: 1px solid #dce8f0;
+}
+.delivery-inner {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 25px;
+}
+.delivery-icon {
+  width: 68px;
+  height: 68px;
+  display: grid;
+  place-items: center;
+  background: white;
+  border: 1px solid #d1e2ee;
+  border-radius: 50%;
+  color: var(--blue);
+}
+.delivery-copy h2 {
+  font-size: 26px;
+  letter-spacing: -0.035em;
+}
+.delivery-copy p {
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-top: 8px;
+}
+.delivery-copy small {
+  display: block;
+  color: #596d7e;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 7px;
+}
+.delivery-inner .button {
+  background: white;
+}
+.products-section {
+  padding-block: 78px;
+}
+.products-section .section-heading {
+  margin-bottom: 32px;
+}
+.product-image img {
+  object-fit: contain;
+}
+.catalog-feature {
+  padding-block: 70px;
+  background: var(--navy);
+  color: white;
+  border: 0;
+}
+.catalog-feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.catalog-feature-copy .eyebrow {
+  color: #8dcaed;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+.catalog-document-mark {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 26px;
+  color: #8bd1fa;
+  font-size: 14px;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+}
+.catalog-document-mark small {
+  display: block;
+  color: #c2d4e1;
+  letter-spacing: 0;
+  font-weight: 400;
+  margin-top: 4px;
+  font-size: 14px;
+}
+.catalog-feature-copy h2 {
+  font-size: clamp(32px, 3.2vw, 46px);
+  line-height: 1.16;
+}
+.catalog-feature-copy h2 span {
+  color: #86c9f0;
+}
+.catalog-feature-copy > p:not(.eyebrow) {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #c2d4e1;
+  margin-block: 24px 30px;
+  max-width: 430px;
+}
+.catalog-feature-copy > .button {
+  background: white;
+  color: #073b60;
+  min-height: 56px;
+  font-size: 16px;
+}
+.catalog-feature-copy > .button:hover {
+  background: #dff1fc;
+}
+.catalog-feature-copy .pdf-label {
+  font-size: 12px;
+  border-color: #89a7bb;
+}
+.catalog-feature-copy .catalog-help {
+  display: flex;
+  width: fit-content;
+  margin-top: 24px;
+  color: #a3d2ef;
+  border-color: #a3d2ef65;
+}
+.catalog-poster {
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.catalog-poster img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.about-section {
+  padding-block: 85px;
+}
+.about-grid {
+  gap: 65px;
+}
+.about-visual {
+  min-height: 0;
+  overflow: hidden;
+}
+.about-visual img {
+  position: static;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.about-figure figcaption {
+  font-size: 12px;
+  margin-top: 12px;
+  color: var(--muted);
+}
+.about-copy > p:not(.eyebrow) {
+  font-size: 17px;
+  margin-top: 24px;
+}
+.about-copy .check-list li {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.silenta-section {
+  padding-block: 80px;
+  background: #f5f8fa;
+  border-block: 1px solid #e7eef3;
+}
+.silenta-feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: center;
+}
+.silenta-poster {
+  margin: 0;
+  max-width: 480px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.silenta-poster img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.silenta-feature-copy h2 {
+  font-size: clamp(38px, 4vw, 58px);
+}
+.silenta-feature-copy p:not(.eyebrow) {
+  max-width: 420px;
+  margin-block: 26px 30px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.8;
+}
+.silenta-feature-copy .button {
+  display: flex;
+  width: fit-content;
+  margin-bottom: 24px;
+}
+.silenta-feature-copy .text-link + .text-link {
+  margin-left: 22px;
+}
+.contact-section {
+  padding-block: 85px;
+  background: white;
+}
+.contact-grid {
+  gap: 70px;
+}
+.contact-copy h2 {
+  font-size: clamp(36px, 3.6vw, 50px);
+}
+.contact-copy > p:not(.eyebrow) {
+  margin-top: 22px;
+  font-size: 17px;
+}
+.contact-details {
+  display: grid;
+  gap: 12px;
+  margin-top: 30px;
+}
+.contact-details .contact-method {
+  display: flex;
+  gap: 18px;
+  padding: 19px 22px;
+  align-items: center;
+  background: #f5f8fb;
+  border: 1px solid #e2eaf0;
+  border-radius: 6px;
+}
+.contact-details .contact-method:hover {
+  border-color: #b7d3e7;
+}
+.contact-details .contact-method > svg {
+  flex-shrink: 0;
+  color: var(--blue);
+}
+.contact-details .contact-method small {
+  display: block;
+  color: #516b80;
+  font-size: 14px;
+  letter-spacing: 0;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.contact-details .contact-method strong {
+  color: var(--navy);
+  font-size: 22px;
+  font-weight: 600;
+}
+.contact-details .contact-email a {
+  display: block;
+  padding: 2px 0;
+  font-size: 18px;
+  font-weight: 550;
+  line-height: 1.6;
+  color: var(--navy);
+}
+.contact-details .contact-email a:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
+.contact-visit {
+  margin-top: 25px;
+}
+.quote-card .quote-badge {
+  font-size: 14px;
+}
+.quote-card h3 {
+  font-size: 28px;
+  margin-top: 20px;
+  line-height: 1.25;
+}
+.quote-card label {
+  font-size: 14px;
+}
+.quote-card .quote-note {
+  font-size: 14px;
+  line-height: 1.7;
+  justify-content: flex-start;
+}
+.quote-card a.button-whatsapp {
+  background: #25d366;
+  color: #063b24;
+  font-size: 16px;
+}
+.quote-card a.button-whatsapp:hover {
+  background: #20c460;
+}
+.visit-section {
+  padding-block: 75px;
+  background: #f5f8fa;
+  border-top: 1px solid var(--line);
+}
+.visit-section .map-heading {
+  margin-bottom: 35px;
+}
+.visit-section .map-heading h2 {
+  font-size: clamp(36px, 3.6vw, 50px);
+}
+.visit-section .map-heading .eyebrow {
+  font-size: 14px;
+}
+.visit-section .dealer-card {
+  background: white;
+}
+.visit-section .dealer-grid {
+  grid-template-columns: minmax(360px, 0.85fr) minmax(0, 1.15fr);
+}
+.visit-section .dealer-card h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.visit-section .dealer-info {
+  font-size: 17px;
+  line-height: 1.8;
+}
+.visit-section .dealer-hours > div + div {
+  margin-top: 5px;
+}
+.visit-section .dealer-hours {
+  font-size: 16px;
+}
+.visit-section .dealer-call {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 23px;
+}
+.visit-section .dealer-visit-note {
+  font-size: 14px;
+}
+.visit-section .dealer-grid .map-frame iframe {
+  min-height: 430px;
+}
+.footer-brand img {
+  width: 92px;
+  height: 92px;
+  object-fit: contain;
+  filter: none;
+}
+@media (max-width: 1200px) {
+  .topbar-inner {
+    gap: 12px;
+  }
+  .topbar-map-label {
+    display: none !important;
+  }
+  .centered-header .nav-left {
+    padding-right: 10px;
+  }
+  .centered-header .header-right {
+    padding-left: 10px;
+    gap: 20px;
+  }
+  .centered-header .desktop-nav {
+    gap: 25px;
+  }
+  .centered-header .desktop-nav a {
+    font-size: 15px;
+  }
+  .catalog-feature-grid,
+  .silenta-feature-grid {
+    gap: 45px;
+  }
+}
+@media (max-width: 1000px) {
+  .topbar-inner > a {
+    font-size: 13px;
+  }
+  .topbar-inner .topbar-shipping {
+    display: none;
+  }
+  .centered-header .header-inner {
+    gap: 22px;
+  }
+  .centered-header .header-right {
+    gap: 18px;
+  }
+  .centered-header .desktop-nav {
+    gap: 20px;
+  }
+  .centered-header .header-quote {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+  .delivery-inner {
+    grid-template-columns: auto 1fr;
+  }
+  .delivery-inner > .button {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
+@media (max-width: 900px) {
+  .centered-header .header-inner {
+    height: 98px;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 12px;
+  }
+  .centered-header .desktop-nav {
+    display: none;
+  }
+  .centered-header .brand-logo img {
+    width: 76px;
+    height: 76px;
+  }
+  .centered-header .header-right {
+    padding: 0;
+    justify-self: end;
+  }
+  .centered-header .menu-toggle {
+    display: flex;
+    grid-column: 1;
+    grid-row: 1;
+    width: fit-content;
+  }
+  .dealer-hero .hero-inner {
+    min-height: 500px;
+  }
+  .dealer-hero .hero-content {
+    max-width: 650px;
+    padding-block: 60px;
+  }
+  .catalog-feature-grid,
+  .silenta-feature-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+  .catalog-feature-copy h2 {
+    font-size: 32px;
+  }
+  .catalog-feature-copy > p:not(.eyebrow),
+  .silenta-feature-copy p:not(.eyebrow) {
+    font-size: 16px;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .about-figure {
+    max-width: 680px;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+  .visit-section .dealer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 650px) {
+  .topbar-inner {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    min-height: 39px;
+    gap: 8px;
+  }
+  .topbar-inner > a {
+    font-size: 14px;
+    gap: 5px;
+  }
+  .topbar-inner > a:nth-child(2) {
+    font-size: 0;
+    gap: 0;
+  }
+  .topbar-inner > a:nth-child(2)::after {
+    content: "WhatsApp";
+    font-size: 13px;
+    margin-left: 6px;
+  }
+  .topbar-inner .topbar-location,
+  .topbar-inner .topbar-shipping {
+    display: none !important;
+  }
+  .centered-header .header-inner {
+    height: 94px;
+    gap: 8px;
+  }
+  .centered-header .header-quote {
+    min-height: 42px;
+    font-size: 14px;
+    padding: 10px 12px;
+    gap: 7px;
+  }
+  .centered-header .header-quote svg {
+    display: none;
+  }
+  .dealer-hero .hero-inner {
+    min-height: 475px;
+  }
+  .dealer-hero .hero-content {
+    padding-block: 52px;
+  }
+  .dealer-hero .eyebrow {
+    margin-bottom: 25px;
+    font-size: 13px;
+  }
+  .dealer-hero h1 {
+    font-size: clamp(38px, 10.4vw, 58px);
+  }
+  .dealer-hero h1 span {
+    font-size: 0.77em;
+  }
+  .dealer-hero .hero-description {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  .dealer-hero .hero-actions {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .dealer-hero .hero-actions .button {
+    font-size: 14px;
+    min-height: 48px;
+    padding: 13px 16px;
+  }
+  .delivery-strip {
+    padding-block: 28px;
+  }
+  .delivery-inner {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .delivery-icon {
+    width: 52px;
+    height: 52px;
+  }
+  .delivery-copy h2 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+  .delivery-copy p {
+    font-size: 16px;
+  }
+  .delivery-inner > .button {
+    grid-column: 1;
+    width: fit-content;
+  }
+  .products-section,
+  .about-section,
+  .silenta-section,
+  .contact-section {
+    padding-block: 55px;
+  }
+  .catalog-feature {
+    padding-block: 50px;
+  }
+  .catalog-feature-grid,
+  .silenta-feature-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .catalog-feature-copy h2 {
+    font-size: 34px;
+  }
+  .catalog-feature-copy .eyebrow {
+    margin-bottom: 20px;
+  }
+  .catalog-document-mark {
+    margin-bottom: 25px;
+  }
+  .catalog-feature-copy > .button {
+    width: 100%;
+  }
+  .catalog-poster {
+    max-width: 500px;
+  }
+  .silenta-feature-copy {
+    grid-row: 1;
+  }
+  .silenta-feature-copy h2 {
+    font-size: 40px;
+  }
+  .silenta-feature-copy p:not(.eyebrow) {
+    margin-block: 22px 26px;
+  }
+  .silenta-poster {
+    max-width: 500px;
+  }
+  .contact-details .contact-method {
+    padding: 17px 18px;
+    gap: 15px;
+  }
+  .contact-details .contact-method strong {
+    font-size: 21px;
+  }
+  .contact-details .contact-email a {
+    font-size: 17px;
+  }
+  .quote-card h3 {
+    font-size: 25px;
+  }
+  .quote-card .quote-note {
+    font-size: 14px;
+  }
+  .visit-section {
+    padding-block: 55px;
+  }
+  .visit-section .map-heading h2 {
+    font-size: 36px;
+  }
+  .visit-section .dealer-info {
+    font-size: 16px;
+  }
+  .visit-section .dealer-card {
+    padding: 25px 21px;
+  }
+  .visit-section .dealer-grid .map-frame iframe {
+    min-height: 330px;
+  }
+  .footer-brand img {
+    width: 84px;
+    height: 84px;
+  }
+}

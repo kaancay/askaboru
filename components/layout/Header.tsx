@@ -2,46 +2,31 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Menu, X, MessageCircle } from "lucide-react";
-const links = [
+const leftLinks = [
   ["Anasayfa", "/#anasayfa"],
   ["Kurumsal", "/#hakkimizda"],
+];
+const rightLinks = [
   ["Ürünlerimiz", "/urunler"],
-  ["Katalog", "/#katalog"],
   ["İletişim", "/#iletisim"],
 ];
 export default function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header
-      className="site-header"
+      className="site-header centered-header"
       onKeyDown={(event) => {
         if (event.key === "Escape") setOpen(false);
       }}
     >
       <div className="shell header-inner">
-        <a
-          href="/#anasayfa"
-          aria-label="Aska Boru anasayfa"
-          className="brand-logo"
-        >
-          <Image
-            src="/logos/aska-logo.png"
-            alt="Aska Boru"
-            width={620}
-            height={288}
-            priority
-          />
-        </a>
-        <nav className="desktop-nav" aria-label="Ana menü">
-          {links.map(([label, href]) => (
+        <nav className="desktop-nav nav-left" aria-label="Ana menü">
+          {leftLinks.map(([label, href]) => (
             <a key={href} href={href}>
               {label}
             </a>
           ))}
         </nav>
-        <a className="button header-quote" href="/#iletisim">
-          <MessageCircle size={18} /> Teklif alın
-        </a>
         <button
           className="menu-toggle"
           aria-label={open ? "Menüyü kapat" : "Menüyü aç"}
@@ -51,17 +36,43 @@ export default function Header() {
         >
           {open ? <X /> : <Menu />}
         </button>
+        <a
+          href="/#anasayfa"
+          aria-label="Aska Boru anasayfa"
+          className="brand-logo"
+        >
+          <Image
+            src="/logos/aska-logo-round.png"
+            alt="Aska Boru"
+            width={1254}
+            height={1254}
+            sizes="(max-width:900px) 76px, 100px"
+            preload
+          />
+        </a>
+        <div className="header-right">
+          <nav
+            className="desktop-nav nav-right"
+            aria-label="Ürünler ve iletişim"
+          >
+            {rightLinks.map(([label, href]) => (
+              <a key={href} href={href}>
+                {label}
+              </a>
+            ))}
+          </nav>
+          <a className="button header-quote" href="/#iletisim">
+            <MessageCircle size={18} aria-hidden="true" /> Teklif alın
+          </a>
+        </div>
       </div>
       {open && (
         <nav id="mobile-menu" className="mobile-nav" aria-label="Mobil menü">
-          {links.map(([label, href]) => (
+          {[...leftLinks, ...rightLinks].map(([label, href]) => (
             <a key={href} href={href} onClick={() => setOpen(false)}>
               {label}
             </a>
           ))}
-          <a href="/#iletisim" onClick={() => setOpen(false)}>
-            Teklif alın
-          </a>
         </nav>
       )}
     </header>
