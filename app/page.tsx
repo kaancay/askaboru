@@ -8,6 +8,7 @@ import Products from "@/components/home/Products";
 import References from "@/components/home/References";
 import Catalog from "@/components/home/Catalog";
 import Contact from "@/components/home/Contact";
+import ProjectSupport from "@/components/home/ProjectSupport";
 import Map from "@/components/home/Map";
 import JsonLd from "@/components/shared/JsonLd";
 import { site } from "@/lib/site";
@@ -109,6 +110,8 @@ export default function Home() {
         <About />
 
         <References />
+
+        <ProjectSupport />
 
         <Contact />
 

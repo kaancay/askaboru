@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FileText, Truck } from "lucide-react";
+import { FileText } from "lucide-react";
 export default function Hero() {
   return (
     <>
@@ -35,33 +35,6 @@ export default function Hero() {
               </a>
             </div>
           </div>
-        </div>
-      </section>
-      <section
-        className="delivery-strip"
-        id="teslimat"
-        aria-labelledby="delivery-heading"
-      >
-        <div className="shell delivery-inner">
-          <div className="delivery-icon">
-            <Truck size={34} strokeWidth={1.5} aria-hidden="true" />
-          </div>
-          <div className="delivery-copy">
-            <h2 id="delivery-heading">Antalya içi gün içinde teslimat.</h2>
-            <p>Projenizde eksik kalan boru ve ek parçaları tamamlayın.</p>
-            <small>
-              Stok ve teslimat adresine göre planlanır. Türkiye geneline
-              sevkiyat yapılır.
-            </small>
-          </div>
-          <a
-            className="button button-outline"
-            href="https://wa.me/905374198285?text=Merhaba%2C%20Antalya%27daki%20projem%20i%C3%A7in%20g%C3%BCn%20i%C3%A7inde%20teslimat%20bilgisi%20almak%20istiyorum."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Teslimat bilgisi alın
-          </a>
         </div>
       </section>
     </>

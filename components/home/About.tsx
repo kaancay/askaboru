@@ -37,8 +37,8 @@ export default function About() {
               destek
             </li>
             <li>
-              <Check size={18} aria-hidden="true" /> Antalya içi teslimat,
-              Türkiye geneline sevkiyat
+              <Check size={18} aria-hidden="true" /> Projeye doğrudan teslimat
+              ve Türkiye geneline sevkiyat
             </li>
           </ul>
           <a href="#iletisim" className="text-link">

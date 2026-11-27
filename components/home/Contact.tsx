@@ -6,7 +6,7 @@ export default function Contact() {
   const [note, setNote] = useState("");
   const message = `Merhaba Aska Boru, ${product || "ürünleriniz"} hakkında bilgi ve fiyat teklifi almak istiyorum.${note.trim() ? `\n\nProje notum: ${note.trim()}` : ""}`;
   return (
-    <section id="iletisim" className="section contact-section">
+    <section id="iletisim" className="section contact-section contact-tinted">
       <div className="shell contact-grid">
         <div className="contact-copy">
           <p className="eyebrow">DOĞRUDAN ULAŞIN</p>
