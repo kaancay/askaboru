@@ -15,7 +15,7 @@ export default function Contact() {
             <br />
             <span>iletişime geçin.</span>
           </h2>
-          <p>Ürün bilgisi ve fiyat teklifi için buradayız.</p>
+          <p>Proje tedariği ve fiyat teklifi için buradayız.</p>
           <div className="contact-details">
             <a className="contact-method" href="tel:+902423381666">
               <Phone size={23} aria-hidden="true" />

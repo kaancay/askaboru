@@ -42,11 +42,11 @@ export default function Header() {
           className="brand-logo"
         >
           <Image
-            src="/logos/aska-logo-round.png"
+            src="/logos/aska-logo-round-hd.png"
             alt="Aska Boru"
-            width={1254}
-            height={1254}
-            sizes="(max-width:900px) 76px, 100px"
+            width={528}
+            height={528}
+            unoptimized
             preload
           />
         </a>

@@ -37,8 +37,8 @@ export default function About() {
               destek
             </li>
             <li>
-              <Check size={18} aria-hidden="true" /> Projeye doğrudan teslimat
-              ve Türkiye geneline sevkiyat
+              <Check size={18} aria-hidden="true" /> Proje süresince tamamlayıcı
+              tedarik desteği
             </li>
           </ul>
           <a href="#iletisim" className="text-link">

@@ -6,10 +6,11 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <Image
-              src="/logos/aska-logo-round.png"
+              src="/logos/aska-logo-round-hd.png"
               alt="Aska Boru"
-              width={1254}
-              height={1254}
+              width={528}
+              height={528}
+              unoptimized
             />
             <p>
               2016’dan bu yana doğru ürün,

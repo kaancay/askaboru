@@ -11,21 +11,24 @@ export default function ProjectSupport() {
           <PackagePlus size={34} strokeWidth={1.5} aria-hidden="true" />
         </div>
         <div className="delivery-copy">
-          <p className="eyebrow">ANTALYA’DAKİ PROJELERİNİZE DESTEK</p>
-          <h2 id="support-heading">Eksik ya da ek parça mı gerekiyor?</h2>
+          <p className="eyebrow">PROJE BOYUNCA YEREL DESTEK</p>
+          <h2 id="support-heading">Projeniz boyunca yanınızdayız.</h2>
           <p>
-            İhtiyacınız olan boru ve bağlantı parçalarını doğrudan projenize
-            ulaştıralım.
+            Malzeme tedariğini bizimle yürüten Antalya projelerinde, sonradan
+            gereken ek ve tamamlayıcı parçalar için yerel teslimat desteği
+            sunuyoruz.
           </p>
-          <small>Malzeme listenizi ve proje adresinizi bizimle paylaşın.</small>
+          <small>
+            İlk malzeme listesinden son bağlantıya, aynı çözüm ortağı.
+          </small>
         </div>
         <a
           className="button button-blue"
-          href="https://wa.me/905374198285?text=Merhaba%20Aska%20Boru%2C%20Antalya%27daki%20projem%20i%C3%A7in%20eksik%20veya%20ek%20boru%20ve%20ba%C4%9Flant%C4%B1%20par%C3%A7alar%C4%B1na%20ihtiyac%C4%B1m%20var.%20Projeye%20teslimat%20i%C3%A7in%20bilgi%20alabilir%20miyim%3F"
+          href={`https://wa.me/905374198285?text=${encodeURIComponent("Merhaba Aska Boru, Antalya’daki projemizin malzeme tedariğini sizinle planlamak ve proje süresince sunduğunuz tamamlayıcı tedarik desteği hakkında bilgi almak istiyorum.")}`}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <MessageCircle size={20} aria-hidden="true" /> Parça talebinizi iletin
+          <MessageCircle size={20} aria-hidden="true" /> Projeniz için görüşelim
         </a>
       </div>
     </section>

@@ -27,8 +27,8 @@ export default function Hero() {
               2016’dan bu yana projelerinizin yanındayız.
             </p>
             <div className="hero-actions">
-              <a href="#urunler" className="button button-blue">
-                Ürünlerimizi inceleyin
+              <a href="#iletisim" className="button hero-quote">
+                Teklif Alın
               </a>
               <a href="#katalog" className="button button-glass">
                 <FileText size={19} aria-hidden="true" /> Ürün kataloğu

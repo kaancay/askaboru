@@ -419,6 +419,13 @@ a.header-quote:hover {
   gap: 12px;
   margin-top: 32px;
 }
+.hero-actions .hero-quote {
+  background: #25d366;
+  color: #073b23;
+}
+.hero-actions .hero-quote:hover {
+  background: #1fbd5a;
+}
 .hero-signature {
   margin-top: 48px;
   display: flex;
@@ -2267,19 +2274,28 @@ a.floating-whatsapp:hover {
 .centered-header .header-inner {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-  height: 120px;
+  grid-template-rows: minmax(0, 1fr);
+  height: 90px;
   gap: 32px;
 }
 .centered-header .brand-logo {
   grid-column: 2;
   grid-row: 1;
   justify-self: center;
+  align-self: start;
+  position: relative;
+  margin-top: 8px;
+  z-index: 2;
+  filter: drop-shadow(0 5px 9px #03223630);
 }
 .centered-header .brand-logo img {
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 132px;
+  height: 132px;
   object-fit: contain;
+}
+.centered-header .mobile-nav {
+  padding-top: 38px;
 }
 .centered-header .desktop-nav {
   display: flex;
@@ -2483,10 +2499,12 @@ a.floating-whatsapp:hover {
 }
 .about-visual {
   min-height: 0;
+  aspect-ratio: auto;
   overflow: hidden;
 }
 .about-visual img {
   position: static;
+  display: block;
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -2740,7 +2758,7 @@ a.floating-whatsapp:hover {
 }
 @media (max-width: 900px) {
   .centered-header .header-inner {
-    height: 98px;
+    height: 84px;
     grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
     gap: 12px;
   }
@@ -2748,8 +2766,11 @@ a.floating-whatsapp:hover {
     display: none;
   }
   .centered-header .brand-logo img {
-    width: 76px;
-    height: 76px;
+    width: 108px;
+    height: 108px;
+  }
+  .centered-header .brand-logo {
+    margin-top: 5px;
   }
   .centered-header .header-right {
     padding: 0;
@@ -2821,8 +2842,15 @@ a.floating-whatsapp:hover {
     display: none !important;
   }
   .centered-header .header-inner {
-    height: 94px;
+    height: 78px;
     gap: 8px;
+  }
+  .centered-header .brand-logo img {
+    width: 96px;
+    height: 96px;
+  }
+  .centered-header .brand-logo {
+    margin-top: 4px;
   }
   .centered-header .header-quote {
     min-height: 42px;
@@ -2964,7 +2992,7 @@ a.floating-whatsapp:hover {
 
 /* Banner-first entrance, project support and a calmer contact section. */
 .dealer-hero .hero-inner {
-  min-height: max(530px, calc(100svh - 160px));
+  min-height: max(530px, calc(100svh - 130px));
 }
 .project-support-section {
   padding-block: 48px;
@@ -3106,12 +3134,12 @@ a.floating-whatsapp:hover {
 }
 @media (max-width: 900px) {
   .dealer-hero .hero-inner {
-    min-height: max(500px, calc(100svh - 138px));
+    min-height: max(500px, calc(100svh - 124px));
   }
 }
 @media (max-width: 650px) {
   .dealer-hero .hero-inner {
-    min-height: max(475px, calc(100svh - 133px));
+    min-height: max(475px, calc(100svh - 117px));
   }
   .project-support-section {
     padding-block: 35px;
