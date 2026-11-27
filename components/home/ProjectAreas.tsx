@@ -50,18 +50,11 @@ export default function ProjectAreas() {
       <div className="shell">
         <div className="project-areas-heading">
           <div>
-            <p className="eyebrow">PROJE ALANLARIMIZ</p>
             <h2 id="project-areas-heading">
-              Hizmet verdiğimiz
-              <br />
-              <span>proje alanları.</span>
+              Hizmet verdiğimiz <span>proje alanları.</span>
             </h2>
           </div>
           <div className="project-areas-intro">
-            <p>
-              Konutlardan büyük ölçekli tesislere, projenizin ihtiyacına uygun
-              boru ve bağlantı elemanları.
-            </p>
             <a href="#iletisim" className="text-link">
               Projeniz için görüşelim
             </a>
@@ -69,13 +62,17 @@ export default function ProjectAreas() {
         </div>
         <div className="project-area-grid">
           {projectAreas.map((area) => (
-            <article className="project-area-card" key={area.title}>
-              <div className="project-area-icon">
-                <area.icon size={27} strokeWidth={1.5} aria-hidden="true" />
-              </div>
-              <h3>{area.title}</h3>
+            <details
+              className="project-area-card"
+              name="project-areas"
+              key={area.title}
+            >
+              <summary>
+                <area.icon size={22} strokeWidth={1.5} aria-hidden="true" />
+                <span>{area.title}</span>
+              </summary>
               <p>{area.text}</p>
-            </article>
+            </details>
           ))}
         </div>
       </div>
